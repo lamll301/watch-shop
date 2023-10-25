@@ -1,0 +1,133 @@
+
+<div class="mt-4">
+    <h3>Tất cả đơn hàng</h3>
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Mã đơn hàng</th>
+                <th scope="col">Tên khách hàng</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Tổng tiền</th>
+                <th scope="col">Ngày tạo đơn</th>
+                <th scope="col" colspan="6"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each orders}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this._id}}</td>
+                <td>{{this.customer_name}}</td>
+                <td>{{this.customer_number}}</td>
+                <td>đ{{addDotsToNumber this.total_price}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>{{this.updateddAt}}</td>
+                <td>
+                    <a href="/admin/order/{{this._id}}/detail" class="btn btn-primary" type="submit">Chi tiết</a>
+                </td>
+
+                {{#if (areEqual this.status 'not-approved')}}
+                  <form method="POST" action="/admin/order/{{this._id}}/approve?_method=PUT">
+                    <td>
+                        <button class="btn btn-primary" type="submit">Duyệt</button>
+                    </td>
+
+                    {{!-- cập nhật lại quantity-stock khi duyệt đơn --}}
+                    {{#each this.products}}
+                    <input type="hidden" name="products[{{@index}}][_id]" value="{{this._id}}">
+                    <input type="hidden" name="products[{{@index}}][name]" value="{{this.name}}">
+                    <input type="hidden" name="products[{{@index}}][image]" value="{{this.image}}">
+                    <input type="hidden" name="products[{{@index}}][description]" value="{{this.description}}">
+                    <input type="hidden" name="products[{{@index}}][manufacturer]" value="{{this.manufacturer}}">
+                    <input type="hidden" name="products[{{@index}}][old_price]" value="{{this.old_price}}">
+                    <input type="hidden" name="products[{{@index}}][current_price]" value="{{this.current_price}}">
+                    <input type="hidden" name="products[{{@index}}][quantity]" value="{{this.quantity}}">
+                    <input type="hidden" name="products[{{@index}}][pay_price]" value="{{this.pay_price}}">
+                    <input type="hidden" name="products[{{@index}}][stock_quantity]" value="{{this.stock_quantity}}">
+                    <input type="hidden" name="products[{{@index}}][stock_quantity_update]" value="{{subtraction this.stock_quantity this.quantity}}">
+                    {{/each}}
+                  </form>
+                {{else}}
+                  {{#if (areEqual this.status 'approved')}}
+                  <form  method="POST" action="/admin/order/{{this._id}}/done?_method=PUT">
+                    <td>
+                        <button class="btn btn-primary" type="submit">Xong</button>
+                    </td>
+                  </form>
+
+                  <form  method="POST" action="/admin/order/{{this._id}}/canceled?_method=PUT">
+                    <td>
+                        <button class="btn btn-primary" type="submit">Hủy</button>
+                    </td>
+                    {{#each this.products}}
+                    <input type="hidden" name="products[{{@index}}][_id]" value="{{this._id}}">
+                    <input type="hidden" name="products[{{@index}}][name]" value="{{this.name}}">
+                    <input type="hidden" name="products[{{@index}}][image]" value="{{this.image}}">
+                    <input type="hidden" name="products[{{@index}}][description]" value="{{this.description}}">
+                    <input type="hidden" name="products[{{@index}}][manufacturer]" value="{{this.manufacturer}}">
+                    <input type="hidden" name="products[{{@index}}][old_price]" value="{{this.old_price}}">
+                    <input type="hidden" name="products[{{@index}}][current_price]" value="{{this.current_price}}">
+                    <input type="hidden" name="products[{{@index}}][quantity]" value="{{this.quantity}}">
+                    <input type="hidden" name="products[{{@index}}][pay_price]" value="{{this.pay_price}}">
+                    <input type="hidden" name="products[{{@index}}][stock_quantity]" value="{{this.stock_quantity}}">
+                    <input type="hidden" name="products[{{@index}}][stock_quantity_update]" value="{{sum this.stock_quantity this.quantity}}">
+                    {{/each}}
+                  </form>
+                  {{/if}}
+                {{/if}}
+
+                <td>
+                    <a href="" class="btn btn-primary" type="submit" data-id="{{this._id}}" data-toggle="modal" data-target="#delete-order-modal">Xóa</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+{{!-- Confirm delete category --}}
+<div id="delete-order-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa đơn hàng?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc chắn muốn xóa đơn hàng này?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete" type="button" class="btn btn-danger">Xoá bỏ</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- delete hidden form --}}
+<form name="delete-form" method="POST"></form>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var id;
+        var deleteForm = document.forms['delete-form'];
+        var btnDelete = document.getElementById('btn-delete');
+
+        // when dialog confirm clicked
+        $('#delete-order-modal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            id = button.data('id');
+        });
+
+        // when delete prod btn click 
+        btnDelete.onclick = function () {
+            deleteForm.action = '/admin/order/' + id + '?_method=DELETE';
+            deleteForm.submit();
+        }
+    });
+</script>

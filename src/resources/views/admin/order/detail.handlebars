@@ -1,0 +1,71 @@
+<div class="mt-4">
+    <h3>Thông tin khách hàng</h3>
+    <div class="form-group mt-4">
+        <label for="name">Mã đơn hàng</label>
+        <input type="text" class="form-control" value="{{order._id}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="slug">Tên khách hàng</label>
+        <input type="text" class="form-control" value="{{order.customer_name}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="slug">Số điện thoại</label>
+        <input type="text" class="form-control" value="{{order.customer_number}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="slug">Địa chỉ nhận hàng</label>
+        <input type="text" class="form-control" value="{{order.customer_address}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="slug">Tỉnh/Thành phố</label>
+        <input type="text" class="form-control" value="{{order.customer_city}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="slug">Quận/Huyện</label>
+        <input type="text" class="form-control" value="{{order.customer_district}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="slug">Phường/Xã</label>
+        <input type="text" class="form-control" value="{{order.customer_ward}}" readonly>
+    </div>
+    <h3 class="mt-4 mb-4">Chi tiết đơn hàng</h3>
+    <table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            {{!-- <th scope="col">Mã sản phẩm</th> --}}
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Ảnh</th>
+            <th scope="col">Giá sản phẩm</th>
+            <th scope="col">Số lượng mua</th>
+            <th scope="col">Giá tiền phải trả</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each order.products}}
+    <tr>
+        <th scope="row">{{sum @index 1}}</th>
+        {{!-- <td>{{this._id}}</td> --}}
+        <td>{{this.name}}</td>
+        <td>
+            <div class="admin-prod-img">
+                <img class="admin-prod-img-content" src="{{this.image}}" alt="">
+            </div>
+        </td>
+        <td>đ{{addDotsToNumber this.current_price}}</td>
+        <td>{{this.quantity}}</td>
+        <td>đ{{addDotsToNumber this.pay_price}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+    </table>
+    <h3 class="mt-4">Thông tin đơn hàng</h3>
+    <div class="form-group mt-4">
+        <label for="slug">Phí vận chuyển</label>
+        <input type="text" class="form-control" value="đ{{addDotsToNumber order.delivery_price}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="slug">Tổng tiền</label>
+        <input type="text" class="form-control" value="đ{{addDotsToNumber order.total_price}}" readonly>
+    </div>
+</div>

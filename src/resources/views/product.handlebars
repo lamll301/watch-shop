@@ -1,0 +1,112 @@
+<!-- Product details -->
+<div class="tab-pane grid product__details">
+    <form method="POST" action="/cart/store">
+    <div class="grid__row app__content">
+        <div class="product__details-img">
+            <img src="{{watches.image}}" alt="">
+        </div>
+        <div class="product__details-info">
+            <h1 class="product__details-heading">Đồng hồ {{watches.name}}</h1>
+            <p class="product__details-description">{{watches.description}}</p>
+            <span class="product__details-current-price">đ{{addDotsToNumber (calculatePrice watches.price watches.discount)}}</span>
+            <div class="product__details-old-price">
+                <span class="product__details-old-price-text">đ{{addDotsToNumber watches.price}}</span>
+                <span class="product__details-percent-discount">( -{{watches.discount}}% )</span>
+            </div>
+            <p class="product__details-manufacturer">Nhà sản xuất:
+                <span class="product__details-manufacturer-content">{{watches.manufacturer}}</span>
+            </p>
+            <div class="product__details-quantity">
+                <span class="product__details-quantity-text">Số lượng:</span>
+                <input type="number" class="product__details-quantity-num" id="quantity_prod" name="quantity" min="1">
+                <span class="product__details-quantity-text">{{watches.stock_quantity}} sản phẩm có sẵn</span>
+            </div>
+            <div class="product__details-btn-buy product__details-btn">
+                {{!-- <a href="/order/{{watches._id}}?quantity=">Mua</a> --}}
+                <a href='' onclick="this.href='/order/prod/{{watches._id}}?quantity='+document.getElementById('quantity_prod').value">Mua</a>
+            </div>
+            <button class="product__details-btn-add-to-cart product__details-btn">
+                Thêm vào giỏ hàng
+            </button>
+            
+            {{!-- <input type="hidden" name="products[1][_id]" value="{{watches._id}}"> --}}
+            <input type="hidden" name="_id" value="{{watches._id}}">
+            <input type="hidden" name="name" value="{{watches.name}}">
+            <input type="hidden" name="image" value="{{watches.image}}">
+            <input type="hidden" name="description" value="{{watches.description}}">
+            <input type="hidden" name="stock_quantity" value="{{watches.stock_quantity}}">
+            <input type="hidden" name="manufacturer" value="{{watches.manufacturer}}">
+            <input type="hidden" name="price" value="{{watches.price}}">
+            <input type="hidden" name="discount" value="{{watches.discount}}">
+
+        </div>
+        
+        <div class="authenticity-guarantee">
+            <h2 class="authenticity-guarantee-heading">
+                Chrono24's Authenticity Guarantee
+            </h2>
+            <div class="section-body">
+                <div class="authenticity-guarantee-body section-body-block ">
+                    <div class="contact-return-content section-body-block-content">
+                        <img src="/img/Buyer-Protection-3.svg" alt="" class="contact-return-img">
+                        <h3 class="contact-return-text">Guaranteed Authentic Watches</h3>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">Every new and used watch on Chrono24 is authentic</li>
+                        </ul>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">Dealers inspect each watch's authenticity</li>
+                        </ul>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">Any deviations from the original condition are listed</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="authenticity-guarantee-body contact-buyer-protection-body section-body-block ">
+                    <div class="contact-return-content section-body-block-content">
+                        <img src="/img/Buyer-Protection4.svg" alt="" class="contact-return-img">
+                        <h3 class="contact-return-text">14 days to get your money back</h3>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">A return policy with extra protection: Receive a full refund of the purchase price</li>
+                        </ul>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">Simply reach out to our support team within 14 days of receiving your watch</li>
+                        </ul>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">Our promise applies to all purchases from professional dealers worldwide</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="authenticity-guarantee-body contact-buyer-protection-body section-body-block ">
+                    <div class="contact-return-content section-body-block-content">
+                        <img src="/img/Buyer-Protection7.svg" alt="" class="contact-return-img">
+                        <h3 class="contact-return-text">We're here for you</h3>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">A 40-person quality & security team that monitors the marketplace around the clock</li>
+                        </ul>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">If you have any questions or concerns, our support team is always ready to help</li>
+                        </ul>
+                        <ul class="authenticity-guarantee-sub">
+                            <li class="contact-return-sub-text authenticity-guarantee-sub-text">Whatever the case, we always find an optimal solution</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="any-questions">
+            <h2 class="any-questions-heading">Do you have any questions?</h2>
+            <div class="any-questions-content">
+                <span class="any-questions-number">
+                    <i class="fa-solid fa-phone"></i>+852 3002 0310</span>
+                <a href="" class="any-questions-contact">
+                    <i class="fa-regular fa-message"></i>Contact</a>
+            </div>
+            <span class="any-questions-doubt-text">I have found an item I would like to buy. How should I proceed?</span>
+            <span class="any-questions-doubt-text">I would like to negotiate a price with the seller. What should I do?</span>
+            <a href="" class="any-questions-btn">More questions and answers</a>
+        </div>
+    </div>
+    </form>
+</div>

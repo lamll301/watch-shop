@@ -1,0 +1,93 @@
+<div class="mt-4">
+    <h3>Tất cả sản phẩm</h3>
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên đồng hồ
+                  {{{sortable 'name' _sort}}}
+                </th>
+                <th scope="col">Mô tả</th>
+                <th scope="col">Ảnh</th>
+                <th scope="col">Giá tiền
+                  {{{sortable 'price' _sort}}}  {{!-- raw data, {{}}: < = &lt; > = &gt --}}
+                </th>
+                <th scope="col">Số lượng
+                  {{{sortable 'stock_quantity' _sort}}}
+                </th>
+                <th scope="col">Nhà sản xuất</th>
+                <th scope="col" colspan="4">Phân loại</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each watches}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td>
+                    <div class="admin-prod-img">
+                        <img class="admin-prod-img-content" src="{{this.image}}" alt="">
+                    </div>
+                </td>
+                <td>đ{{addDotsToNumber (calculatePrice this.price this.discount)}} (-{{this.discount}}%)<br><br>Giá gốc: đ{{addDotsToNumber this.price}}
+                </td>
+                <td>{{this.stock_quantity}}</td>
+                <td>{{this.manufacturer}}</td>
+                <td>{{this.categories_slug}}</td>
+                <td>
+                    <a href="/admin/prod/{{this._id}}/edit" class="btn btn-primary" type="submit">Sửa</a>
+                </td>
+                <td>
+                    <a href="" class="btn btn-primary" type="submit" data-id="{{this._id}}" data-toggle="modal" data-target="#delete-prod-modal">Xóa</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+{{!-- Confirm delete watch --}}
+<div id="delete-prod-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa sản phẩm?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete" type="button" class="btn btn-danger">Xoá bỏ</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- delete hidden form --}}
+<form name="delete-form" method="POST"></form>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var id;
+        var deleteForm = document.forms['delete-form'];
+        var btnDelete = document.getElementById('btn-delete');
+
+        // when dialog confirm clicked
+        $('#delete-prod-modal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            id = button.data('id');
+        });
+        // when delete prod btn click 
+        btnDelete.onclick = function () {
+            deleteForm.action = '/admin/prod/' + id + '?_method=DELETE';
+            deleteForm.submit();
+        }
+    });
+</script>

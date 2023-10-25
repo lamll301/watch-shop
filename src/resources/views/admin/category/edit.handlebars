@@ -1,0 +1,19 @@
+<div class="mt-4">
+    <h3>Cập nhật danh mục</h3>
+    <form class="mt-4" method="POST" action="/admin/category/{{category._id}}?_method=PUT">
+        <div class="form-group">
+            <label for="name">Tên danh mục</label>
+            <input type="text" class="form-control" value="{{category.name}}" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="type">Phân loại</label>
+            <input type="text" class="form-control" value="{{category.type}}" id="type" name="type">
+        </div>
+        <div class="form-group">
+            <label for="slug">Slug</label>
+            <input type="text" class="form-control" value="{{category.slug}}" id="slug" name="slug" readonly>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+    </form>
+</div>

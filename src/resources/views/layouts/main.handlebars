@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    {{!-- <link rel="stylesheet" href="/css/base.css"> --}}
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/vendor/open-iconic-master/font/css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" href="/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        {{#if isAdminRoute}}
+            {{> admin-header}}
+        {{else}}
+            {{> header}}
+        {{/if}}
+
+        <div class="container">
+            {{{body}}}  
+        </div>
+
+        {{#if isAdminRoute}}
+            {{> admin-footer}}
+        {{else}}
+            {{> footer}}
+        {{/if}}
+    </div>
+    <script src="/js/jquery-3.7.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
+

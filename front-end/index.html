@@ -1,0 +1,2607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&display=swap"
+        rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="header__navbar--underline">
+                <div class="grid">
+                    <nav class="header__navbar">
+                        <ul class="header__navbar-list header__navbar-list--left">
+                            <!-- not logged -->
+                            <li class="header__navbar-item">Hi!
+                                <a href="" class="header__navbar-item-link--blue" id="login-link">Đăng nhập</a>
+                                hoặc
+                                <a href="" class="header__navbar-item-link--blue" id="register-link">Đăng ký</a>
+                            </li>
+                            <!-- logged -->
+                            <li class="header__navbar-item header__navbar-user">Hi
+                                <span class="header__navbar-user-name">Lam!</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                                <ul class="header__navbar-user-menu">
+                                    <li class="header__navbar-user-item ">
+                                        <a href="" class="header__navbar-user-item-info">
+                                            <img src="https://securepics.ebaystatic.com/aw/pics/social/profile_avatar_60x60.png" alt="" class="header__navbar-user-item-avatar">
+                                            <p class="header__navbar-user-item-name">Lam Le</p>
+                                        </a>
+                                    </li>
+                                    <li class="header__navbar-user-item header__navbar-user-item-option">
+                                        <a href="" class="">Cài đặt tài khoản</a>
+                                    </li>
+                                    <li class="header__navbar-user-item header__navbar-user-item-option">
+                                        <a href="" class="header__navbar-user-item-logout">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="header__navbar-item header__navbar-item--has-qr">Tải ứng dụng
+                                <!-- Header qr-code -->
+                                <div class="header__qr">
+                                    <img src="/src/public/img/qr_code.png" alt="QR code" class="header__qr-img">
+                                    <div class="header__qr-apps">
+                                        <a href="" class="header__qr-link">
+                                            <img src="./assets/img/google_play.png" alt="Google Play" class="header__qr-download-img">
+                                        </a>
+                                        <a href="" class="header__qr-link">
+                                            <img src="./assets/img/app_store.png" alt="App Store" class="header__qr-download-img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__navbar-item">Kết nối
+                                <a href="" class="header__navbar-icon-link">
+                                    <i class="header__navbar-icon--blue header__navbar-icon fa-brands fa-facebook fa-xl"></i>
+                                </a>
+                                <a href="" class="header__navbar-icon-link">
+                                    <i class="header__navbar-icon--blue header__navbar-icon fa-brands fa-instagram fa-xl"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item">
+                                <a href="" class="header__navbar-item-link">Hỗ trợ</a>
+                            </li>
+                            <!-- header notify -->
+                            <li class="header__navbar-item header__navbar-item--has-notify">
+                                <a href="" class="header__navbar-item-link">
+                                    <i class="fa-regular fa-bell fa-xl"></i>
+                                </a>
+                                <div class="header__notify">
+                                    <header class="header__notify-header">
+                                        <h3>Thông báo mới nhận</h3>
+                                    </header>
+                                    <ul class="header__notify-list">
+                                        <li class="header__notify-item header__notify-item--readed">
+                                            <a href="" class="header__notify-link">
+                                                <span>
+                                                    <img src="https://cdn2.chrono24.com/images/uhren/14918589-kqirpim2pinveeituhgfvpfz-Square390.jpg" alt="" class="header__notify-img">
+                                                </span>
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">Rolex GMT-Master II, (2023 Full Set) Pepsi Meteorite Dial</span>
+                                                    <span class="header__notify-description">Condition: Unworn | Year of production 2023 | Original box | Original papers</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <span>
+                                                    <img src="https://cdn2.chrono24.com/images/uhren/28664574-731v83348qqopishs77jdk7s-Square360.jpg" alt="" class="header__notify-img">
+                                                </span>
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">Rolex GMT-Master II, Pepsi" 116719BLRO</span>
+                                                    <span class="header__notify-description">Pre-owned (Very good) | Year of production 2017 | Original box | Original papers</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <span>
+                                                    <img src="https://cdn2.chrono24.com/images/uhren/28869272-8xv4vtutzg4v2gx8lu3yn1cn-Square210.jpg" alt="" class="header__notify-img">
+                                                </span>
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">F.P.Journe Writing Instruments Set Fountain & Ballpoint Pens</span>
+                                                    <span class="header__notify-description">Brand F.P. Journe, Model Writing Instruments, Case Case 116 mm, Titanium & Rose gold Fountain pen. 119 mm, Titanium & Rose gold Ballpoint pen.</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <span>
+                                                    <img src="https://cdn2.chrono24.com/images/uhren/28869272-8xv4vtutzg4v2gx8lu3yn1cn-Square210.jpg" alt="" class="header__notify-img">
+                                                </span>
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">F.P.Journe Writing Instruments Set Fountain & Ballpoint Pens</span>
+                                                    <span class="header__notify-description">Brand F.P. Journe, Model Writing Instruments, Case Case 116 mm, Titanium & Rose gold Fountain pen. 119 mm, Titanium & Rose gold Ballpoint pen.</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <span>
+                                                    <img src="https://cdn2.chrono24.com/images/uhren/28869272-8xv4vtutzg4v2gx8lu3yn1cn-Square210.jpg" alt="" class="header__notify-img">
+                                                </span>
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">F.P.Journe Writing Instruments Set Fountain & Ballpoint Pens</span>
+                                                    <span class="header__notify-description">Brand F.P. Journe, Model Writing Instruments, Case Case 116 mm, Titanium & Rose gold Fountain pen. 119 mm, Titanium & Rose gold Ballpoint pen.</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link">
+                                                <span>
+                                                    <img src="https://cdn2.chrono24.com/images/uhren/28869272-8xv4vtutzg4v2gx8lu3yn1cn-Square210.jpg" alt="" class="header__notify-img">
+                                                </span>
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">F.P.Journe Writing Instruments Set Fountain & Ballpoint Pens</span>
+                                                    <span class="header__notify-description">Brand F.P. Journe, Model Writing Instruments, Case Case 116 mm, Titanium & Rose gold Fountain pen. 119 mm, Titanium & Rose gold Ballpoint pen.</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <footer class="header__notify-footer">
+                                        <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                    </footer>
+                                </div>
+                            </li>
+                            <!-- cart layout -->
+                            <li class="header__navbar-item">
+                                <a href="" class="header__navbar-item-link header__cart">
+                                    <i class="header__navbar-icon--blue fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="header__cart-notice">5</span>
+                                    <!-- no cart: header__cart-list--no-cart -->
+                                    <div class="header__cart-list "> 
+                                    <img src="./assets/img/no_cart.png" alt="" class="header__cart-no-cart-img form--closed">
+                                        <p class="header__cart-list--no-cart-msg form--closed">
+                                            Chưa có sản phẩm
+                                        </p>
+
+                                        <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                        <ul class="header__cart-list-item">
+                                            <!-- cart item -->
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/29370316-z9sqznsra3evfo2nkj4u3l51-Square360.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona, ロレックス コスモグラフデイトナ 116505 750</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Pre-owned (Good) | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/29307047-6g5pxtjom80i9jbvca2q6oum-Square390.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Condition: Unworn | Year of production 2018 | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/images_40/s7/12874740_s420_v1573675694634.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona, 40mm Yellow Gold White Dial & Gold Bezel 116508</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Condition: New | Year of production 2022 | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/images_40/s7/12874740_s420_v1573675694634.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona, 40mm Yellow Gold White Dial & Gold Bezel 116508</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Condition: New | Year of production 2022 | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/images_40/s7/12874740_s420_v1573675694634.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona, 40mm Yellow Gold White Dial & Gold Bezel 116508</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Condition: New | Year of production 2022 | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/images_40/s7/12874740_s420_v1573675694634.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona, 40mm Yellow Gold White Dial & Gold Bezel 116508</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Condition: New | Year of production 2022 | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/images_40/s7/12874740_s420_v1573675694634.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona, 40mm Yellow Gold White Dial & Gold Bezel 116508</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Condition: New | Year of production 2022 | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://cdn2.chrono24.com/images/uhren/images_40/s7/12874740_s420_v1573675694634.jpg" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Rolex Daytona, 40mm Yellow Gold White Dial & Gold Bezel 116508</h5>
+                                                        <div class="header__cart-item-price-wrap">
+                                                            <span class="header__cart-item-price">$52,463</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-describe">Condition: New | Year of production 2022 | Original box | Original papers</span>
+                                                        <span class="header__cart-item-remove">Xóa
+                                                            <i class="fa-solid fa-trash fa-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <button class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="grid">
+                <!-- header with search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <img src="./assets/img/logo-chrono24.svg" class="header__logo-img" alt="Logo">
+                    </div>
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            <!-- search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-list-item">
+                                        <a href="" class="">Hãng đồng hồ Rolex</a>
+                                    </li>
+                                    <li class="header__search-history-list-item">
+                                        <a href="" class="">Thương hiệu đồng hồ Cartier</a>
+                                    </li>
+                                    <li class="header__search-history-list-item">
+                                        <a href="" class="">Hãng đồng hồ nổi tiếng Audemars Piguet</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="header__search-btn">
+                        <span class="header__search-btn-text">Search</span>
+                    </button>
+                    <div class="header__btn">
+
+                    </div>
+                </div>
+                
+            </div>
+            <!-- func bar  -->
+            <div class="grid">
+                <div class="header-function-bar">
+                    <ul class="header-function-bar-list">
+                        <li class="tab-item header-function-bar-item">
+                            <a href="" class="header-function-bar-name">TRANG CHỦ</a>
+                        </li>
+                        <!-- func bar menu -->
+                        <li class="header-function-bar-item header-function-bar-item-menu">
+                            <a href="" class="header-function-bar-name">
+                                MENU
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <div class="header-function-bar-menu">
+                                <div class="header-function-bar-menu-contain">
+                                    <div class="header-function-bar-menu-items">
+                                        <h3 class="header-function-bar-menu-title">Theo hãng</h3>
+                                        <ul class="header-function-bar-menu-list">
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                   
+                                    <div class="header-function-bar-menu-items">
+                                        <h3 class="header-function-bar-menu-title">Theo hãng</h3>
+                                        <ul class="header-function-bar-menu-list">
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="header-function-bar-menu-items">
+                                        <h3 class="header-function-bar-menu-title">Theo hãng</h3>
+                                        <ul class="header-function-bar-menu-list">
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                            <li class="header-function-bar-menu-item">
+                                                <a href="" class="header-function-bar-menu-name">
+                                                    Vacheron Constantin
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tab-item header-function-bar-item">
+                            <a href="" class="header-function-bar-name">ĐỒNG HỒ NAM</a>
+                        </li>
+                        <li class="tab-item header-function-bar-item">
+                            <a href="" class="header-function-bar-name">ĐỒNG HỒ NỮ</a>
+                        </li>
+                        <li class="header-function-bar-item">
+                            <a href="" class="header-function-bar-name">BÁN ĐỒNG HỒ</a>
+                        </li>
+                        <li class="tab-item header-function-bar-item">
+                            <a href="" class="header-function-bar-name">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <div class="app__container">
+            <!-- home page -->
+            <div class="tab-pane home__page form--closed">
+                <div class="slider">
+                    <img src="/assets/img/slider1.webp" alt="Slider Image">
+                    <img src="/assets/img/slider2.webp" alt="Slider Image">
+                    <img src="/assets/img/slider3.webp" alt="Slider Image">
+                    <img src="/assets/img/slider4.webp" alt="Slider Image">
+                    <img src="/assets/img/slider5.webp" alt="Slider Image">
+                    <div class="slider-content">
+                        <span class="slider-text">Find your dream watch on the leading marketplace for luxury watches.</span>
+                        <div class="slider-rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star slider-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star slider-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star slider-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star slider-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star slider-star"></i>
+                            <span class="slider-rating-number">(137,330)</span>
+                        </div>
+                        <div class="slider-powered-by">
+                            <span class="slider-powered-by-text">Powered by</span>
+                            <span class="slider-powered-by-sponsors">Trustpilot</span>
+                        </div>
+                    </div>
+                </div>     
+                
+                <div class="content">
+                    <!-- Popular brands -->
+                    <div class="content-section">
+                        <h2 class="section-heading">Popular brands</h2>
+                        <div class="popular-brands">
+                            <div class="popular-brands-list">
+                                <a href="" class="popular-brands-item">Rolex</a>
+                                <a href="" class="popular-brands-item">Omega</a>
+                            </div>
+                            <div class="popular-brands-list">
+                                <a href="" class="popular-brands-item">Patek Philippe</a>
+                                <a href="" class="popular-brands-item">Audemars Piguet</a>
+                            </div>
+                            <div class="popular-brands-list">
+                                <a href="" class="popular-brands-item">Breitling</a>
+                                <a href="" class="popular-brands-item">Tudor</a>
+                            </div>
+                            <div class="popular-brands-list">
+                                <a href="" class="popular-brands-item">Cartier</a>
+                                <a href="" class="popular-brands-item">Panerai</a>
+                            </div>
+                            <div class="popular-brands-list">
+                                <a href="" class="popular-brands-item">IWC</a>
+                                <a href="" class="popular-brands-item">Seiko</a>
+                            </div>
+                            <div class="popular-brands-list form--closed">
+                                <a href="" class="popular-brands-item">Jaeger-LeCoultre</a>
+                                <a href="" class="popular-brands-item">TAG Heuer</a>
+                            </div>
+                        </div>
+                        <!-- tạo nút chuyển phần từ thừa -->
+                        <ul class="popular-brands-transfer">
+                            <li class="dot dot--selected"></li>
+                            <li class="dot dot--not-selected"></li>
+                        </ul>
+                    </div>
+                    <!-- about section -->
+                    <div class="content-section">
+                        <h2 class="section-heading">The Leading Marketplace for Luxury Watches Since 2003</h2>
+                        <div class="section-body">
+                            <div class="introduce section-body-block">
+                                <div class="introduce-content section-body-block-content">
+                                    <img src="./assets/img/introduce1.svg" alt="" class="introduce-img">
+                                    <h3 class="introduce-text">4.8 out of 5 stars</h3>
+                                    <p class="introduce-sub-text">from 137,000 reviews worldwide</p>
+                                </div>
+                            </div>
+    
+                            <div class="introduce section-body-block">
+                                <div class="introduce-content">
+                                    <img src="./assets/img/introduce2.svg" alt="" class="introduce-img">
+                                    <h3 class="introduce-text">9 million</h3>
+                                    <p class="introduce-sub-text">watch enthusiasts use Chrono24 each month</p>
+                                </div>
+                            </div>
+    
+                            <div class="introduce section-body-block">
+                                <div class="introduce-content">
+                                    <img src="./assets/img/introduce3.svg" alt="" class="introduce-img">
+                                    <h3 class="introduce-text">Over 200,000</h3>
+                                    <p class="introduce-sub-text">customers choose Buyer Protection annually</p>
+                                </div>
+                            </div>
+    
+                            <div class="introduce section-body-block">
+                                <div class="introduce-content">
+                                    <img src="./assets/img/introduce4.svg" alt="" class="introduce-img">
+                                    <h3 class="introduce-text">More than 25,000</h3>
+                                    <p class="introduce-sub-text">Trustworthy sellers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- buyer protection -->
+                    <div class="content-section">
+                        <div class="buyer-protection">
+                            <div class="buyer-protection-content">
+                                <h2 class="buyer-protection-heading">Chrono24 Buyer Protection</h2>
+                                <ul class="buyer-protection-list">
+                                    <li class="buyer-protection-item">
+                                        <i class="fa-solid fa-check fa-lg buyer-protection-icon"></i>
+                                        Payment via the Escrow Service
+                                    </li>
+                                    <li class="buyer-protection-item">
+                                        <i class="fa-solid fa-check fa-lg buyer-protection-icon"></i>
+                                        Authenticity Guarantee
+                                    </li>
+                                    <li class="buyer-protection-item">
+                                        <i class="fa-solid fa-check fa-lg buyer-protection-icon"></i>
+                                        Global money-back guarantee
+                                    </li>
+                                    <li class="buyer-protection-item">
+                                        <i class="fa-solid fa-check fa-lg buyer-protection-icon"></i>
+                                        Strict dealer guidelines
+                                    </li>
+                                    <li class="buyer-protection-item">
+                                        <i class="fa-solid fa-check fa-lg buyer-protection-icon"></i>
+                                        Insured Shipments
+                                    </li>
+                                    <li class="buyer-protection-item">
+                                        <i class="fa-solid fa-check fa-lg buyer-protection-icon"></i>
+                                        Chrono24's quality & security team
+                                    </li>
+                                </ul>
+                                <a href="" class="buyer-protection-footer">Learn more about security on Chrono24</a>
+                            </div>
+                            <div class="buyer-protection-img">
+                                <img src="./assets/img/buyer-protection3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Our Most Popular Models -->
+                    <div class="content-section">
+                        <h2 class="section-heading">Our Most Popular Models</h2>
+                        <div class="popular-models">
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            <div class="popular-model">
+                                <img src="./assets/img/popular-model1.png" alt="" class="popular-model-img">
+                                <div class="popular-model-info">
+                                    <span class="popular-model-name">Rolex</span>
+                                    <strong class="popular-model-type">Datejust</strong>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <ul class="popular-models-list">
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Omega
+                                    <strong class="popular-models-item-type">Seamaster</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Breitling
+                                    <strong class="popular-models-item-type">Navitimer</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Rolex
+                                    <strong class="popular-models-item-type">Oyster Perpetual</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Patek Philippe
+                                    <strong class="popular-models-item-type">Grand Complications</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Omega
+                                    <strong class="popular-models-item-type">Seamaster</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Breitling
+                                    <strong class="popular-models-item-type">Navitimer</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Rolex
+                                    <strong class="popular-models-item-type">Oyster Perpetual</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Patek Philippe
+                                    <strong class="popular-models-item-type">Grand Complications</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Omega
+                                    <strong class="popular-models-item-type">Seamaster</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Breitling
+                                    <strong class="popular-models-item-type">Navitimer</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Rolex
+                                    <strong class="popular-models-item-type">Oyster Perpetual</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Patek Philippe
+                                    <strong class="popular-models-item-type">Grand Complications</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Omega
+                                    <strong class="popular-models-item-type">Seamaster</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Breitling
+                                    <strong class="popular-models-item-type">Navitimer</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Rolex
+                                    <strong class="popular-models-item-type">Oyster Perpetual</strong>
+                                </a>
+                            </li>
+                            <li class="popular-models-item">
+                                <a href="" class="popular-models-item-name">Patek Philippe
+                                    <strong class="popular-models-item-type">Grand Complications</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- how to buy -->
+                    <div class="content-section">
+                        <h2 class="section-heading">Buying guide to watch shops</h2>
+                        <div class="section-body">
+                            <div class="how-to-buy section-body-block">
+                                <div class="how-to-buy-content section-body-block-content">
+                                    <img src="./assets/img/how-to-buy1.svg" alt="" class="how-to-buy-img">
+                                    <p class="how-to-buy-text">1.  Find your dream watch</p>
+                                </div>
+                            </div>
+    
+                            <div class="how-to-buy section-body-block">
+                                <div class="how-to-buy-content section-body-block-content">
+                                    <img src="./assets/img/how-to-buy2.svg" alt="" class="how-to-buy-img">
+                                    <p class="how-to-buy-text">2.  Pay via a secure escrow account</p>
+                                </div>
+                            </div>
+                            <div class="how-to-buy section-body-block">
+                                <div class="how-to-buy-content section-body-block-content">
+                                    <img src="./assets/img/how-to-buy3.svg" alt="" class="how-to-buy-img">
+                                    <p class="how-to-buy-text">3.  Receive your new watch</p>
+                                </div>
+                            </div>
+                            <div class="how-to-buy section-body-block">
+                                <div class="how-to-buy-content section-body-block-content">
+                                    <img src="./assets/img/how-to-buy4.svg" alt="" class="how-to-buy-img">
+                                    <p class="how-to-buy-text">4.  Only then will the seller receive payment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- guide -->
+                    <div class="content-section">
+                        <div class="section-body">
+                            <div class="guide section-body-block">
+                                <div class="guide-content">
+                                    <h3 class="guide-text">Luxury Watches</h3>
+                                    <p class="guide-sub-text">Luxury watches are a source of fascination for people around the globe. But what qualifies as a luxury watch? Some may say it's any watch made of expensive materials such as gold or platinum. Others could argue that it has to be a mechanical watch with a handmade movement. Then there are those who define luxury based on legendary brands such as Rolex, Patek Philippe, and Breitling.</p>
+                                    <p class="guide-sub-text">Whatever it is you're looking for, you will find luxury watches from all the famous brands in every price range on Chrono24. Find and purchase your dream watch now.</p>
+                                </div>
+                            </div>
+    
+                            <div class="guide section-body-block">
+                                <div class="guide-content">
+                                    <h3 class="guide-text">Used Watches</h3>
+                                    <p class="guide-sub-text">Not every watch has to come fresh from the factory. In fact, many people fall for the charm of watches with designs from the 60s or 70s. These vintage watches include coveted collector's items and hidden treasures waiting to be uncovered by watch fans. Here you will find both expensive rarities as well as legendary pieces whose predecessor models can be purchased at affordable prices.</p>
+                                    <p class="guide-sub-text">Searching for the right vintage watch is part of the overall shopping experience and often turns novices into watch aficionados.</p>
+                                </div>
+                            </div>
+                            <div class="guide section-body-block">
+                                <div class="guide-content">
+                                    <h3 class="guide-text">Sell Watches</h3>
+                                    <p class="guide-sub-text">Every month, over 9 million watch enthusiasts search for their next watch on Chrono24 – perhaps yours is the watch they are looking for? Create a free listing in a few simple steps and find a buyer for your watch.</p>
+                                    <p class="guide-sub-text">Once you've made a sale, the rest is easy: The buyer transfers the purchase price to a secure escrow account and then you ship the watch. Once it has arrived safely at its destination, you will receive payment into your bank account. We retain a small commission fee at the time of payout.</p>
+                                    <p class="guide-sub-text">Looking to free up some wrist space? Sell your watch now on Chrono24.</p>
+                                </div>
+                            </div>
+                            <div class="guide section-body-block">
+                                <div class="guide-content">
+                                    <h3 class="guide-text">Buying a Watch</h3>
+                                    <p class="guide-sub-text">Found your dream watch on Chrono24? Don't hesitate to make this dream a reality. The safest way to do so is with Chrono24's free Buyer Protection. This comprehensive coverage includes payment via the Escrow Service. Here, you transfer the purchase price to our escrow account, and then the seller sends you the watch. Once you have received your watch, we keep your money safe in our escrow account for 14 days, giving you time to inspect the watch and make sure it is as described.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- male watch -->
+            <div class="tab-pane grid">
+                <div class="grid__row app__content ">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fa-solid fa-list fa-sm"></i>
+                                Danh mục
+                            </h3>
+            
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">Đồng hồ cơ</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ thông minh</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ điện tử</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ điện tử</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ điện tử</a>
+                                </li>
+                            </ul>
+                    </div>
+    
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter-name">Đồng Hồ Nam Cao Cấp</span>
+                            <div class="home-filter-below">
+                                <span class="home-filter-search">1416 mặt hàng được tìm thấy chỉ trong Cao cấp</span>
+                                <div class="home-filter-below-left">
+                                    <span class="home-filter__label">Sắp xếp theo:</span>
+                                    <div class="select-input">
+                                        <span class="select-input__label">Phù hợp nhất</span>
+                                        <i class="fa-solid fa-chevron-down select-input__icon"></i>
+                                        <!-- list options -->
+                                        <ul class="select-input__list">
+                                            <li class="select-input__item select-input__item--active">
+                                                <a href="" class="select-input__link">Phù hợp nhất</a>
+                                            </li>
+                                            <li class="select-input__item">
+                                                <a href="" class="select-input__link">Giá từ thấp tới cao</a>
+                                            </li>
+                                            <li class="select-input__item">
+                                                <a href="" class="select-input__link">Giá từ cao xuống thấp</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <div class="grid__row product-list">
+                                <!-- product item -->
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="/product/{{this._id}}">
+                                        <div class="home-product-item__img" style="background-image: url('https://cdn2.chrono24.com/images/uhren/30040375-212a1of9pbxcayx5mas16pqe-Square280.jpg');"></div>
+                                        <h4 class="home-product-item__name">Đồng hồ Rolex Daytona</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">đ20.000.000</span> 
+                                            <span class="home-product-item__price-curr">đ10.000.000</span> 
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star fa-sm"></i>
+                                                <i class="fa-solid fa-star fa-sm"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">Còn lại: 100 cái.</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__origin-name">USA</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <span class="">Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">50%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="pagination home-product__pagination">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                                </a>
+                            </li>
+
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item pagination-item-3-dots">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">20</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- female watch -->
+            <div class="tab-pane grid form--closed">
+                <div class="grid__row app__content ">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fa-solid fa-list fa-sm"></i>
+                                Danh mục
+                            </h3>
+            
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">Đồng hồ cơ</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ thông minh</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ điện tử</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ điện tử</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ điện tử</a>
+                                </li>
+                            </ul>
+                    </div>
+    
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter-name">Đồng Hồ Nữ Cao Cấp</span>
+                            <div class="home-filter-below">
+                                <span class="home-filter-search">1416 mặt hàng được tìm thấy chỉ trong Cao cấp</span>
+                                <div class="home-filter-below-left">
+                                    <span class="home-filter__label">Sắp xếp theo:</span>
+                                    <div class="select-input">
+                                        <span class="select-input__label">Phù hợp nhất</span>
+                                        <i class="fa-solid fa-chevron-down select-input__icon"></i>
+                                        <!-- list options -->
+                                        <ul class="select-input__list">
+                                            <li class="select-input__item select-input__item--active">
+                                                <a href="" class="select-input__link">Phù hợp nhất</a>
+                                            </li>
+                                            <li class="select-input__item">
+                                                <a href="" class="select-input__link">Giá từ thấp tới cao</a>
+                                            </li>
+                                            <li class="select-input__item">
+                                                <a href="" class="select-input__link">Giá từ cao xuống thấp</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <div class="grid__row product-list">
+                                <!-- product item -->
+                                
+                            </div>
+                        </div>
+                        
+                        <ul class="pagination home-product__pagination">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                                </a>
+                            </li>
+
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item pagination-item-3-dots">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">20</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- contact -->
+            <div class="tab-pane contact form--closed">
+                <div class="contact-adv">
+                    <div class="contact-adv-slider contact-adv-slider-active">
+                        <img src="./assets/img/contact-adv-img1.jpg" alt="" class="contact-adv-img">
+                        <img src="./assets/img/contact-adv-img-decorate1.svg" alt="" class="contact-adv-img-decorate">
+                        <div class="contact-adv-describe">
+                            <span class="contact-adv-text">Secure.</span>
+                            <span class="contact-adv-text">Reliable.</span>
+                            <span class="contact-adv-text">Free.</span>
+                            <span class="contact-adv-sub-text">#chrono24buyerprotection</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-adv-slider">
+                        <img src="./assets/img/hero-private-apac-lg-2x.webp" alt="" class="contact-adv-img">
+                        <img src="./assets/img/magnifying-glass.svg" alt="" class="contact-adv-img-decorate">
+                        <div class="contact-adv-describe">
+                            <span class="contact-adv-text">Easy &</span>
+                            <span class="contact-adv-text">secure</span>
+                            <span class="contact-adv-text contact-adv-text-2">purchases from private sellers</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buyer Protection -->
+                <div class="contact-buyer-protection">
+                    <div class="content-section">
+                        <div class="contact-buyer-protection-heading">
+                            <img src="./assets/img/Buyer-Protection1.svg" alt="" class="contact-buyer-protection-heading-img">
+                            <h2 class="section-heading">Chrono24 Buyer Protection: What's Included</h2>
+                        </div>
+                        <div class="section-body">
+                            <div class="contact-buyer-protection-body section-body-block">
+                                <a href="#buyer-protection-1">
+                                    <div class="contact-buyer-protection-body-content section-body-block-content">
+                                        <img src="./assets/img/Buyer-Protection2.svg" alt="" class="contact-buyer-protection-body-img">
+                                        <p class="contact-buyer-protection-body-text">Payment via the Escrow Service</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="contact-buyer-protection-body section-body-block">
+                                <a href="#buyer-protection-2">
+                                    <div class="contact-buyer-protection-body-content section-body-block-content">
+                                        <img src="./assets/img/Buyer-Protection-3.svg" alt="" class="contact-buyer-protection-body-img">
+                                        <p class="contact-buyer-protection-body-text">Authenticity Guarantee</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="contact-buyer-protection-body section-body-block">
+                                <a href="#buyer-protection-3">
+                                    <div class="contact-buyer-protection-body-content section-body-block-content">
+                                        <img src="./assets/img/Buyer-Protection4.svg" alt="" class="contact-buyer-protection-body-img">
+                                        <p class="contact-buyer-protection-body-text">14 Days Global money-back guarantee</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="contact-buyer-protection-body section-body-block">
+                                <a href="#buyer-protection-4">
+                                    <div class="contact-buyer-protection-body-content section-body-block-content">
+                                        <img src="./assets/img/Buyer-Protection5.svg" alt="" class="contact-buyer-protection-body-img">
+                                        <p class="contact-buyer-protection-body-text">Strict dealer guidelines</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="contact-buyer-protection-body section-body-block">
+                                <a href="#buyer-protection-5">
+                                    <div class="contact-buyer-protection-body-content section-body-block-content">
+                                        <img src="./assets/img/Buyer-Protection6.svg" alt="" class="contact-buyer-protection-body-img">
+                                        <p class="contact-buyer-protection-body-text">Insured shipments</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="contact-buyer-protection-body section-body-block">
+                                <a href="#buyer-protection-6">
+                                    <div class="contact-buyer-protection-body-content section-body-block-content">
+                                        <img src="./assets/img/Buyer-Protection7.svg" alt="" class="contact-buyer-protection-body-img">
+                                        <p class="contact-buyer-protection-body-text">Chrono24's quality & security team</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="buyer-protection-1" class="content-section contact-content">
+                        <div class="contact-content-has-text">
+                            <div>
+                                <h2 class="contact-content-text">Payment via the Escrow Service</h2>
+                                <p class="contact-content-sub">Thanks to the Chrono24 Escrow Service, your payment is fully covered. We keep your money in our escrow account for <span class="text-bold">14 days</span> after delivery of your watch. Thus, you have time to carefully inspect your order knowing your money is safe in our account. Only then do we transfer payout to the dealer.</p>
+                            </div>
+                        </div>
+                        <div class="contact-content-has-img">
+                            <img src="./assets/img/contact-content-img1.webp" alt="" class="contact-content-img">
+                        </div>
+                    </div>
+                    <div id="buyer-protection-2" class="content-section contact-content">
+                        <div class="contact-content-has-img">
+                            <img src="./assets/img/contact-content-img2.webp" alt="" class="contact-content-img">
+                        </div>
+                        <div class="contact-content-has-text">
+                            <div>
+                                <h2 class="contact-content-text">Authenticity Guarantee</h2>
+                                <p class="contact-content-sub">Our promise: Every new and used watch on Chrono24 is authentic. Our dealers are required to inspect each watch's authenticity and may only list original timepieces. However, should issues arise, you have 14 days upon delivery of your order to contact our support team and get your money back.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buyer-protection-3" class="content-section contact-content">
+                        <div class="contact-content-has-text">
+                            <div>
+                                <h2 class="contact-content-text">14 Days Global money-back guarantee</h2>
+                                <p class="contact-content-sub">Is your watch defective, malfunction, not as the seller described or does not meet your expectation? No worries! You have 14 days (after the day of delivery) to initiate a return and receive a full refund quickly and easily thanks to our global money-back guarantee.</p>
+                                <p class="contact-content-sub">*For details, please inquire via phone or email.</p>
+                            </div>
+                        </div>
+                        <div class="contact-content-has-img">
+                            <img src="./assets/img/contact-content-img3.webp" alt="" class="contact-content-img">
+                        </div>
+                    </div>
+                    <!-- return -->
+                    <div class="content-section">
+                        <h2 class="section-heading">Returns Made Easy</h2>
+                        <div class="section-body">
+                            <div class="contact-return-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-return-content section-body-block-content">
+                                    <img src="./assets/img/Returns-Made-Easy1.svg" alt="" class="contact-return-img">
+                                    <h3 class="contact-return-text">1. Contact our support team</h3>
+                                    <p class="contact-return-sub-text">Call ( +852 3002 0310 ) or email our support team within 14 days of receiving the watch. We will document and confirm your wish to return your order and guide you through the next steps.</p>                                 
+                                </div>
+                            </div>
+                            
+                            <div class="contact-return-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-return-content section-body-block-content">
+                                    <img src="./assets/img/Returns-Made-Easy2.svg" alt="" class="contact-return-img">
+                                    <h3 class="contact-return-text">2. Ship the watch back to the dealer</h3>
+                                    <p class="contact-return-sub-text">Send the watch back fully insured and in its original packaging. You will be responsible for the return shipping costs in most cases.</p>                                 
+                                </div>
+                            </div>
+                            <div class="contact-return-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-return-content section-body-block-content">
+                                    <img src="./assets/img/Buyer-Protection4.svg" alt="" class="contact-return-img">
+                                    <h3 class="contact-return-text">3. Receive a refund of the full purchase price</h3>
+                                    <p class="contact-return-sub-text">Finally, we will refund you the full purchase price and the initial shipping costs.</p>                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buyer-protection-4" class="content-section contact-content">
+                        <div class="contact-content-has-img">
+                            <img src="./assets/img/contact-content-img4.webp" alt="" class="contact-content-img">
+                        </div>
+                        <div class="contact-content-has-text">
+                            <div>
+                                <h2 class="contact-content-text">Strict dealer guidelines</h2>
+                                <p class="contact-content-sub">In the interest of security, dealers on our marketplace must follow a strict set of rules. Before a professional dealer can sell on our platform, they must provide us with their photo ID, commercial register entry, business address, and tax number. Furthermore, we require all dealers to follow our strict dealer guidelines. Authentic customer reviews also provide insights into the respective dealer's services, so you can always be sure who you're buying from.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buyer-protection-5" class="content-section contact-content">
+                        <div class="contact-content-has-text">
+                            <div>
+                                <h2 class="contact-content-text">Insured shipments</h2>
+                                <p class="contact-content-sub">Dealers ship every order with full insurance coverage. In rare case of unsuccessful delivery, your shipment would be fully insured, so you can make both domestic and international purchases risk-free.</p>
+                                <p class="contact-content-sub">*For details, please inquire via phone or email.</p>
+                            </div>
+                        </div>
+                        <div class="contact-content-has-img">
+                            <img src="./assets/img/contact-content-img5.webp" alt="" class="contact-content-img">
+                        </div>
+                    </div>
+                    <div id="buyer-protection-6" class="content-section contact-content">
+                        <div class="contact-content-has-img">
+                            <img src="./assets/img/contact-content-img6.webp" alt="" class="contact-content-img">
+                        </div>
+                        <div class="contact-content-has-text">
+                            <div>
+                                <h2 class="contact-content-text">Chrono24's quality & security team</h2>
+                                <p class="contact-content-sub">Our 40-person quality & security team works hard to detect suspicious listings and address issues before they arise, allowing you to focus on what’s most important – finding the right watch!</p>
+                                <p class="contact-content-sub">Also our team is always here to support you during the whole buying process, in case there is any issue with the watch you received.</p>
+                                <p class="contact-content-sub">*For details, please inquire via phone or email.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-section contact-content">
+                        <div class="contact-content-has-img">
+                            <img src="./assets/img/contact-content-img7.webp" alt="" class="contact-content-img">
+                        </div>
+                        <div class="contact-content-has-text">
+                            <div>
+                                <h2 class="contact-content-text">Need help?</h2>
+                                <p class="contact-content-sub">Our multilingual support team is always available to assist you. No matter what happens, you can count on us!</p>
+                                <ul class="contact-need-help-list">
+                                    <li class="contact-need-help-item contact-need-help-item-phone">
+                                        <i class="fa-solid fa-phone contact-need-help-icon"></i>
+                                        <p class="contact-need-help-phone-text">
+                                            Personalized support
+                                        </p>
+                                        <i class="fa-solid fa-mobile contact-need-help-icon"></i>
+                                        <p class="contact-need-help-phone-number">
+                                            +852 3002 0310
+                                        </p>
+                                    </li>
+                                    <li class="contact-need-help-item">
+                                        <i class="fa-solid fa-message contact-need-help-icon"></i>
+                                        <a href="" class="contact-need-help-link">
+                                            Contact Chrono24
+                                        </a>
+                                    </li>
+                                    <li class="contact-need-help-item">
+                                        <i class="fa-regular fa-circle-question contact-need-help-icon"></i>
+                                        <a href="" class="contact-need-help-faq">
+                                            Browse our FAQ
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h2 class="section-heading">Important Facts & Figures</h2>
+                        <div class="section-body">
+                            <div class="contact-facts-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-facts-content contact-return-content section-body-block-content">
+                                    <h3 class="contact-facts-text">18</h3>
+                                    <p class="contact-facts-sub-text">years as the leading marketplace for luxury watches</p>                                 
+                                </div>
+                            </div>
+                            <div class="contact-facts-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-facts-content contact-return-content section-body-block-content">
+                                    <h3 class="contact-facts-text">39,000</h3>
+                                    <p class="contact-facts-sub-text">trustworthy sellers from over 120 countries</p>                                 
+                                </div>
+                            </div>
+                            <div class="contact-facts-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-facts-content contact-return-content section-body-block-content">
+                                    <h3 class="contact-facts-text">200,000</h3>
+                                    <p class="contact-facts-sub-text">customers choose Buyer Protection annually</p>                                 
+                                </div>
+                            </div>
+                            <div class="contact-facts-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-facts-content contact-return-content section-body-block-content">
+                                    <h3 class="contact-facts-text">9,000,000</h3>
+                                    <p class="contact-facts-sub-text">website visitors monthly</p>                                 
+                                </div>
+                            </div>
+                            <div class="contact-facts-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-facts-content contact-return-content section-body-block-content">
+                                    <h3 class="contact-facts-text">541,000</h3>
+                                    <p class="contact-facts-sub-text">listings covering a wide range of watches</p>                                 
+                                </div>
+                            </div>
+                            <div class="contact-facts-body contact-buyer-protection-body section-body-block">
+                                <div class="contact-facts-content contact-return-content section-body-block-content">
+                                    <h3 class="contact-facts-text">6,550,000</h3>
+                                    <p class="contact-facts-sub-text">satisfied app users</p>                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product details -->
+            <div class="tab-pane grid product__details form--closed">
+                <div class="grid__row app__content">
+                    <div class="product__details-img">
+                        <img src="https://cdn2.chrono24.com/images/uhren/21293023-0jv7igzxvoco243r7kg16erm-ExtraLarge.jpg" alt="">
+                    </div>
+                    <div class="product__details-info">
+                        <h1 class="product__details-heading">Audemars Piguet Royal Oak Concept</h1>
+                        <p class="product__details-description">
+                            We are an independently owned and operated business with boutique locations in New York and Miami. Feel free to stop in to either location. If you aren’t finding what you’re looking for, please contact us. We whole heartedly believe that every first-time buyer will be a client for life.
+                        </p>
+                        <span class="product__details-current-price">$143,199</span>
+                        <div class="product__details-old-price">
+                            <span class="product__details-old-price-text">$143,199</span>
+                            <span class="product__details-percent-discount">( -0% )</span>
+                        </div>
+                        <p class="product__details-manufacturer">Nhà sản xuất:
+                            <span class="product__details-manufacturer-content">Germany</span>
+                        </p>
+                        <div class="product__details-quantity">
+                            <span class="product__details-quantity-text">Số lượng:</span>
+                            <input type="number" class="product__details-quantity-num">
+                            <span class="product__details-quantity-text">11111 sản phẩm có sẵn</span>
+                        </div>
+                        <div class="product__details-btn-buy product__details-btn">
+                            <a href="">Mua</a>
+                        </div>
+                        <div class="product__details-btn-add-to-cart product__details-btn">
+                            <a href="">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+
+                    <div class="authenticity-guarantee">
+                        <h2 class="authenticity-guarantee-heading">
+                            Chrono24's Authenticity Guarantee
+                        </h2>
+                        <div class="section-body">
+                            <div class="authenticity-guarantee-body section-body-block ">
+                                <div class="contact-return-content section-body-block-content">
+                                    <img src="./assets/img/Buyer-Protection-3.svg" alt="" class="contact-return-img">
+                                    <h3 class="contact-return-text">Guaranteed Authentic Watches</h3>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">Every new and used watch on Chrono24 is authentic</li>
+                                    </ul>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">Dealers inspect each watch's authenticity</li>
+                                    </ul>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">Any deviations from the original condition are listed</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="authenticity-guarantee-body contact-buyer-protection-body section-body-block ">
+                                <div class="contact-return-content section-body-block-content">
+                                    <img src="./assets/img/Buyer-Protection4.svg" alt="" class="contact-return-img">
+                                    <h3 class="contact-return-text">14 days to get your money back</h3>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">A return policy with extra protection: Receive a full refund of the purchase price</li>
+                                    </ul>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">Simply reach out to our support team within 14 days of receiving your watch</li>
+                                    </ul>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">Our promise applies to all purchases from professional dealers worldwide</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="authenticity-guarantee-body contact-buyer-protection-body section-body-block ">
+                                <div class="contact-return-content section-body-block-content">
+                                    <img src="./assets/img/Buyer-Protection7.svg" alt="" class="contact-return-img">
+                                    <h3 class="contact-return-text">We're here for you</h3>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">A 40-person quality & security team that monitors the marketplace around the clock</li>
+                                    </ul>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">If you have any questions or concerns, our support team is always ready to help</li>
+                                    </ul>
+                                    <ul class="authenticity-guarantee-sub">
+                                        <li class="contact-return-sub-text authenticity-guarantee-sub-text">Whatever the case, we always find an optimal solution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="any-questions">
+                        <h2 class="any-questions-heading">Do you have any questions?</h2>
+                        <div class="any-questions-content">
+                            <span class="any-questions-number">
+                                <i class="fa-solid fa-phone"></i>+852 3002 0310</span>
+                            <a href="" class="any-questions-contact">
+                                <i class="fa-regular fa-message"></i>Contact</a>
+                        </div>
+                        <span class="any-questions-doubt-text">I have found an item I would like to buy. How should I proceed?</span>
+                        <span class="any-questions-doubt-text">I would like to negotiate a price with the seller. What should I do?</span>
+                        <a href="" class="any-questions-btn">More questions and answers</a>
+                    </div>
+                </div>
+            </div>
+            <!-- order -->
+            <div class="tab-pane grid order form--closed">
+                <div class="order-upper-part">
+                    <div class="order-customer">
+                        <h1 class="order-customer-heading">Your Order</h1>
+                        <div class="order-customer-info">
+                            <h3 class="order-customer-text">Thông tin khách hàng</h3>
+                            <div class="order-customer-content">
+                                <div class="order-customer-row">
+                                    <label for="" class="order-customer-row-label">Họ tên *</label>
+                                    <input type="text" class="order-customer-row-input">
+                                </div>
+                                <div class="order-customer-row">
+                                    <label for="" class="order-customer-row-label">Số điện thoại *</label>
+                                    <input type="text" class="order-customer-row-input">
+                                </div>
+                                <div class="order-customer-row">
+                                    <label for="" class="order-customer-row-label">Địa chỉ nhận hàng *</label>
+                                    <input type="text" class="order-customer-row-input">
+                                </div>
+                                <div class="order-customer-row">
+                                    <label for="" class="order-customer-row-label">Địa chỉ nhận hàng *</label>
+                                    <input type="text" class="order-customer-row-input">
+                                </div>
+                                <div class="order-customer-row">
+                                    <label for="province" class="order-customer-row-label">Tỉnh/Thành phố *</label>
+                                    <select id="province" class="order-customer-row-input" onchange="loadDistricts()">
+                                        <option value="">Chọn tỉnh/thành phố</option>
+                                    </select>
+                                </div>
+                                <div class="order-customer-row">
+                                    <label for="district" class="order-customer-row-label">Quận/Huyện *</label>
+                                    <select id="district" class="order-customer-row-input" onchange="loadWards()">
+                                        <option value="">Chọn quận/huyện</option>
+                                    </select>
+                                </div>
+                                <div class="order-customer-row">
+                                    <label for="ward" class="order-customer-row-label">Phường/Xã *</label>
+                                    <select id="ward" class="order-customer-row-input">
+                                        <option value="">Chọn phường/xã</option>
+                                    </select>
+                                </div>
+                                <script>
+                                    function fetchProvinces() {
+                                        // Gửi yêu cầu API để lấy dữ liệu tỉnh thành phố
+                                        fetch('https://vapi.vnappmob.com/api/province')
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                const provinceSelect = document.getElementById("province");
+                                
+                                                // Điền danh sách các tỉnh thành phố vào list box
+                                                data.results.forEach(function (province) {
+                                                    const option = document.createElement("option");
+                                                    option.value = province.province_id;
+                                                    option.textContent = province.province_name;
+                                                    provinceSelect.appendChild(option);
+                                                });
+                                            })
+                                            .catch(error => {
+                                                console.error('Error fetching provinces:', error);
+                                            });
+                                    }
+                                
+                                    function loadDistricts() {
+                                        const provinceSelect = document.getElementById("province");
+                                        const districtSelect = document.getElementById("district");
+                                        const wardSelect = document.getElementById("ward");
+                                
+                                        // Xóa tất cả các tùy chọn cũ trong danh sách quận/huyện và phường/xã
+                                        districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
+                                        wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+                                
+                                        const selectedProvinceId = provinceSelect.value;
+                                
+                                        // Nếu đã chọn một tỉnh/thành phố, điền danh sách quận/huyện tương ứng
+                                        if (selectedProvinceId) {
+                                            // Gửi yêu cầu API để lấy dữ liệu quận huyện cho tỉnh/thành phố được chọn
+                                            fetch(`https://vapi.vnappmob.com/api/province/district/${selectedProvinceId}`)
+                                                .then(response => response.json())
+                                                .then(data => {
+                                                    // Điền danh sách các quận/huyện vào list box
+                                                    data.results.forEach(function (district) {
+                                                        const option = document.createElement("option");
+                                                        option.value = district.district_id;
+                                                        option.textContent = district.district_name;
+                                                        districtSelect.appendChild(option);
+                                                    });
+                                                })
+                                                .catch(error => {
+                                                    console.error('Error fetching districts:', error);
+                                                });
+                                        }
+                                    }
+                                
+                                    function loadWards() {
+                                        const districtSelect = document.getElementById("district");
+                                        const wardSelect = document.getElementById("ward");
+                                
+                                        // Xóa tất cả các tùy chọn cũ trong danh sách phường/xã
+                                        wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+                                
+                                        const selectedDistrictId = districtSelect.value;
+                                
+                                        // Nếu đã chọn một quận/huyện, điền danh sách phường/xã tương ứng
+                                        if (selectedDistrictId) {
+                                            // Gửi yêu cầu API để lấy dữ liệu phường xã cho quận/huyện được chọn
+                                            fetch(`https://vapi.vnappmob.com/api/province/ward/${selectedDistrictId}`)
+                                                .then(response => response.json())
+                                                .then(data => {
+                                                    // Điền danh sách các phường/xã vào list box
+                                                    data.results.forEach(function (ward) {
+                                                        const option = document.createElement("option");
+                                                        option.value = ward.ward_id;
+                                                        option.textContent = ward.ward_name;
+                                                        wardSelect.appendChild(option);
+                                                    });
+                                                })
+                                                .catch(error => {
+                                                    console.error('Error fetching wards:', error);
+                                                });
+                                        }
+                                    }
+                                
+                                    // Khi trang tải xong, lấy danh sách tỉnh thành phố và điền vào list box tỉnh/thành phố
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        fetchProvinces();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <h3 class="order-payment-heading order-customer-text">Thông tin đơn hàng</h3>
+                        <div class="order-payment-row">Tạm tính (1 Sản phẩm)
+                            <span class="order-payment-price">95.000 ₫</span>
+                        </div>
+                        <div class="order-payment-row">Phí vận chuyển
+                            <span class="order-payment-price">31.300 ₫</span>
+                        </div>
+                        <div class="order-payment-row order-payment-total">Tổng cộng:
+                            <span class="order-payment-price order-payment-total-price">31.300 ₫</span>
+                        </div>
+                        <button class="order-payment-btn header__search-btn">
+                            <span class="header__search-btn-text">Đặt hàng</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="order-lower-part">
+                    <h3 class="order-customer-text">Chi tiết đơn hàng</h3>
+                    <div class="order-prod">
+                        <img src="https://lzd-img-global.slatic.net/g/p/edeb9fb13e0f4126beec473f1d401158.jpg_2200x2200q75.jpg_.webp" alt="" class="order-prod-img">
+                        <div class="order-prod-info">
+                            <a href="" class="order-prod-name">DasdadDasdadsadsadaDa sdadsadsadaDasd adsadsadasadsadasdasdasdsadasdasdsadasdassadasdsad</a>
+                        </div>
+                        <div class="order-prod-price">
+                            <p class="order-prod-curr-price">25.500 ₫</p>
+                            <p class="order-prod-old-price">25.500 ₫</p>
+                            <p class="order-prod-discount">25.500 ₫</p>
+                            <a href="" class="order-prod-remove">
+                                <i class="fa-solid fa-trash fa-xl"></i>
+                            </a>
+                        </div>
+                        <div class="order-prod-quantity">Số lượng: 1</div>
+                    </div>
+                    
+                    <div class="order-prod">
+                        <img src="https://lzd-img-global.slatic.net/g/p/edeb9fb13e0f4126beec473f1d401158.jpg_2200x2200q75.jpg_.webp" alt="" class="order-prod-img">
+                        <div class="order-prod-info">
+                            <a href="" class="order-prod-name">DasdadDasdadsadsadaDa sdadsadsadaDasd adsadsadasadsadasdasdasdsadasdasdsadasdassadasdsad</a>
+                        </div>
+                        <div class="order-prod-price">
+                            <p class="order-prod-curr-price">25.500 ₫</p>
+                            <p class="order-prod-old-price">25.500 ₫</p>
+                            <p class="order-prod-discount">25.500 ₫</p>
+                            <a href="" class="order-prod-remove">
+                                <i class="fa-solid fa-trash fa-xl"></i>
+                            </a>
+                        </div>
+                        <div class="order-prod-quantity">Số lượng: 1</div>
+                    </div>
+                    <div class="order-prod">
+                        <img src="https://lzd-img-global.slatic.net/g/p/edeb9fb13e0f4126beec473f1d401158.jpg_2200x2200q75.jpg_.webp" alt="" class="order-prod-img">
+                        <div class="order-prod-info">
+                            <a href="" class="order-prod-name">DasdadDasdadsadsadaDa sdadsadsadaDasd adsadsadasadsadasdasdasdsadasdasdsadasdassadasdsad</a>
+                        </div>
+                        <div class="order-prod-price">
+                            <p class="order-prod-curr-price">25.500 ₫</p>
+                            <p class="order-prod-old-price">25.500 ₫</p>
+                            <p class="order-prod-discount">25.500 ₫</p>
+                            <a href="" class="order-prod-remove">
+                                <i class="fa-solid fa-trash fa-xl"></i>
+                            </a>
+                        </div>
+                        <div class="order-prod-quantity">Số lượng: 1</div>
+                    </div>
+                    <div class="order-prod">
+                        <img src="https://lzd-img-global.slatic.net/g/p/edeb9fb13e0f4126beec473f1d401158.jpg_2200x2200q75.jpg_.webp" alt="" class="order-prod-img">
+                        <div class="order-prod-info">
+                            <a href="" class="order-prod-name">DasdadDasdadsadsadaDa sdadsadsadaDasd adsadsadasadsadasdasdasdsadasdasdsadasdassadasdsad</a>
+                        </div>
+                        <div class="order-prod-price">
+                            <p class="order-prod-curr-price">25.500 ₫</p>
+                            <p class="order-prod-old-price">25.500 ₫</p>
+                            <p class="order-prod-discount">25.500 ₫</p>
+                            <a href="" class="order-prod-remove">
+                                <i class="fa-solid fa-trash fa-xl"></i>
+                            </a>
+                        </div>
+                        <div class="order-prod-quantity">Số lượng: 1</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- cart -->
+            <div class="tab-pane grid order form--closed">
+                <div class="order-upper-part">
+                    <div class="order-customer">
+                        <h1 class="order-customer-heading">Shopping cart</h1>
+                        
+                        <div class="order-lower-part">
+                            <h3 class="order-customer-text">Chi tiết giỏ hàng</h3>
+                            <div class="order-prod">
+                                <img src="https://lzd-img-global.slatic.net/g/p/edeb9fb13e0f4126beec473f1d401158.jpg_2200x2200q75.jpg_.webp" alt="" class="order-prod-img">
+                                <div class="order-prod-info">
+                                    <a href="" class="order-prod-name">DasdadDasdadsadsadaDa sdadsadsadaDasd adsadsadasadsadasdasdasdsadasdasdsadasdassadasdsad</a>
+                                    <br><br><span class="order-prod-stock-quantity">Còn lại {{watches.stock_quantity}} cái.</span>
+                                </div>
+                                <div class="order-prod-price">
+                                    <p class="order-prod-curr-price">25.500 ₫</p>
+                                    <p class="order-prod-old-price">25.500 ₫</p>
+                                    <p class="order-prod-discount">25.500 ₫</p>
+                                    <a href="" class="order-prod-remove">
+                                        <i class="fa-solid fa-trash fa-xl"></i>
+                                    </a>
+                                </div>
+                                <div class="order-prod-quantity">Số lượng: 
+                                    <input type="number" class="order-prod-quantity-input">
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <h3 class="order-payment-heading order-customer-text">Thông tin đơn hàng</h3>
+                        <div class="order-payment-row">Tạm tính (1 Sản phẩm)
+                            <span class="order-payment-price">95.000 ₫</span>
+                        </div>
+                        <div class="order-payment-row">Phí vận chuyển
+                            <span class="order-payment-price">31.300 ₫</span>
+                        </div>
+                        <div class="order-payment-row order-payment-total">Tổng cộng:
+                            <span class="order-payment-price order-payment-total-price">31.300 ₫</span>
+                        </div>
+                        <button class="order-payment-btn header__search-btn">
+                            <span class="header__search-btn-text">Đặt hàng</span>
+                        </button>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <!-- customer -->
+            <div class="tab-pane grid account__settings form--closed">
+                <div class="order-upper-part">
+                    <div class="order-customer account__settings-tabs">
+                        <h1 class="order-customer-heading">Quản lý tài khoản</h1>
+                        
+                        <div class="account__settings-tabs-container">
+                            <div class="account__settings-tab">
+                                <a href="" class="account__settings-tab--links">Thông tin cá nhân</a>
+                            </div>
+                            <div class="account__settings-tab ">
+                                <a href="" class="account__settings-tab--links">Đổi mật khẩu</a>
+                            </div>
+                            <div class="account__settings-tab account__settings-tab-active">
+                                <a href="" class="account__settings-tab--links">Đơn mua</a>
+                            </div>
+                        </div>
+                        <!-- thông tin cá nhân -->
+                        <div class="account__settings-tab-pane order-lower-part form--closed">
+                            <h3 class="order-customer-text account__settings-text">Thông tin cá nhân</h3>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Tên</span>
+                                <div class="account__settings-block-content">
+                                    <input type="text" class="account__settings-block-content-input" value="Lam"></input>
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Giới tính</span>
+                                <div class="account__settings-block-content">
+                                    <div class="account__settings-block-content-gender">
+                                        <input type="radio" name="gender" class="account__settings-block-content-radio" value="Nam"></input>
+                                        Nam
+                                    </div>
+                                    <div class="account__settings-block-content-gender">
+                                        <input type="radio" name="gender" class="account__settings-block-content-radio" value="Nữ"></input>
+                                        Nữ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Email</span>
+                                <div class="account__settings-block-content">
+                                    <input type="text" class="account__settings-block-content-input"></input>
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Số điện thoại</span>
+                                <div class="account__settings-block-content">
+                                    <input type="text" class="account__settings-block-content-input" value="08444444444"></input>
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Ngày sinh</span>
+                                <div class="account__settings-block-content">
+                                    <input type="date" class="account__settings-block-content-input" value="2000-01-01">
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Địa chỉ</span>
+                                <div class="account__settings-block-content">
+                                    <textarea class="account__settings-block-content-input account__settings-block-content-textarea">So 8 Khu Tap The BO QUO HAI PHONG</textarea>
+                                </div>
+                            </div>
+                            <button class="account__settings-btn">Lưu</button>
+                        </div>
+
+                        <!-- đổi mk -->
+                        <div class="account__settings-tab-pane order-lower-part form--closed">
+                            <h3 class="order-customer-text account__settings-text">Đổi mật khẩu</h3>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Email</span>
+                                <div class="account__settings-block-content">
+                                    <input type="text" class="account__settings-block-content-input" value="ádsadasdasd" readonly></input>
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Mật khẩu cũ</span>
+                                <div class="account__settings-block-content">
+                                    <input type="password" class="account__settings-block-content-input"></input>
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Mật khẩu mới</span>
+                                <div class="account__settings-block-content">
+                                    <input type="password" class="account__settings-block-content-input"></input>
+                                </div>
+                            </div>
+                            <div class="account__settings-block">
+                                <span class="account__settings-block-text">Xác nhận mật khẩu</span>
+                                <div class="account__settings-block-content">
+                                    <input type="password" class="account__settings-block-content-input"></input>
+                                </div>
+                            </div>
+                            <button class="account__settings-btn">Lưu</button>
+                        </div>
+                        <!-- đơn mua -->
+                        <div class="account__settings-tab-pane">
+                            <h3 class="order-customer-text account__settings-text">Đơn mua</h3>
+                            <div class="account__settings-purchase-order">
+                                <div class="account__settings-purchase-order-header">
+                                    <div>
+                                        <span class="account__settings-purchase-order-favourite">Yêu thích</span>
+                                        <span class="account__settings-purchase-order-manufacturer">Nguồn gốc - Nhat Ban</span>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-truck account__settings-purchase-order-icon"></i>
+                                        <span class="account__settings-purchase-order-status">Đơn hàng đã được giao thành công </span>
+                                        <i class="fa-regular fa-circle-question"></i>
+                                        <span class="account__settings-purchase-order-evaluate">ĐÁNH GIÁ</span>
+                                    </div>
+                                </div>
+                                <div class="account__settings-purchase-order-content">
+                                    <img src="https://img1.kienthucvui.vn/uploads/2021/02/11/hinh-nen-dong-ho-cho-may-tinh-dep_113844621.jpg" alt="" class="account__settings-purchase-order-img">
+                                    <div class="account__settings-purchase-order-prod">
+                                        <div class="account__settings-purchase-order-about-prod">
+                                            <span class="account__settings-purchase-order-name">Tinh dau nuoc hoa Sauvas Tinh dau nuoc hoa Sauvas Tinh dau nuoc hoa Sauvas Tinh dau nuoc hoa Sauvas </span>
+                                            <div class="account__settings-purchase-order-describe">sdasd asdasdasd sadasdasd asdasdasda sdadasd sdasd asdasdasd sadasdasd asdasdasda sdadasdsdasd asdasdasd sadasdasd asdasdasda sdadasd sdasd asdasdasd sadasdasd asdasdasda sdadasd</div>
+                                            <div class="account__settings-purchase-order-quantity">x1</div>
+                                        </div>
+                                        <div class="account__settings-purchase-order-price">
+                                            <span class="account__settings-purchase-order-old-price">đ100.000</span>
+                                            <span class="account__settings-purchase-order-current-price">đ100.000</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="account__settings-purchase-btns">
+                                    <a href="" class="account__settings-purchase-btn account__settings-purchase-acquisition">Mua Lại</a>
+                                    <a href="" class="account__settings-purchase-btn account__settings-purchase-contact">Liên Hệ Người Bán</a>
+                                </div>
+                            </div>
+
+                            <div class="account__settings-purchase-order">
+                                <div class="account__settings-purchase-order-header">
+                                    <div>
+                                        <span class="account__settings-purchase-order-favourite">Yêu thích</span>
+                                        <span class="account__settings-purchase-order-manufacturer">Nguồn gốc - Nhat Ban</span>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-truck account__settings-purchase-order-icon"></i>
+                                        <span class="account__settings-purchase-order-status">Đơn hàng đã được giao thành công </span>
+                                        <i class="fa-regular fa-circle-question"></i>
+                                        <span class="account__settings-purchase-order-evaluate">ĐÁNH GIÁ</span>
+                                    </div>
+                                </div>
+                                <div class="account__settings-purchase-order-content">
+                                    <img src="https://img1.kienthucvui.vn/uploads/2021/02/11/hinh-nen-dong-ho-cho-may-tinh-dep_113844621.jpg" alt="" class="account__settings-purchase-order-img">
+                                    <div class="account__settings-purchase-order-prod">
+                                        <div class="account__settings-purchase-order-about-prod">
+                                            <span class="account__settings-purchase-order-name">Tinh dau nuoc hoa Sauvas Tinh dau nuoc hoa Sauvas Tinh dau nuoc hoa Sauvas Tinh dau nuoc hoa Sauvas </span>
+                                            <div class="account__settings-purchase-order-describe">sdasd asdasdasd sadasdasd asdasdasda sdadasd sdasd asdasdasd sadasdasd asdasdasda sdadasdsdasd asdasdasd sadasdasd asdasdasda sdadasd sdasd asdasdasd sadasdasd asdasdasda sdadasd</div>
+                                            <div class="account__settings-purchase-order-quantity">x1</div>
+                                        </div>
+                                        <div class="account__settings-purchase-order-price">
+                                            <span class="account__settings-purchase-order-old-price">đ100.000</span>
+                                            <span class="account__settings-purchase-order-current-price">đ100.000</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="account__settings-purchase-btns">
+                                    <a href="" class="account__settings-purchase-btn account__settings-purchase-acquisition">Mua Lại</a>
+                                    <a href="" class="account__settings-purchase-btn account__settings-purchase-contact">Liên Hệ Người Bán</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Trung Tâm Trợ Giúp</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Hướng Dẫn Mua Hàng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Thanh Toán</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Vận Chuyển</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Trả Hàng & Hoàn Tiền</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chăm Sóc Khách Hàng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chính Sách Bảo Hành</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">GIỚI THIỆU</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Giới Thiệu Về Chúng Tôi</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Tuyển Dụng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chính Sách Bảo Mật</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chính Hãng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Liên Hệ Với Truyền Thông</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">THANH TOÁN</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <div class="footer__list-item-img">
+                                    <img src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8" alt="">
+                                </div>
+                                <div class="footer__list-item-img">
+                                    <img src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16" alt="">
+                                </div>
+                                <div class="footer__list-item-img">
+                                    <img src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08" alt="">
+                                </div>
+                                <div class="footer__list-item-img">
+                                    <img src="https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c" alt="">
+                                </div>
+                                <div class="footer__list-item-img">
+                                    <img src="https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281" alt="">
+                                </div>
+                                <div class="footer__list-item-img">
+                                    <img src="https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">
+                                    <i class="footer-item__icon fa-brands fa-facebook fa-lg"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">
+                                    <i class="footer-item__icon fa-brands fa-instagram fa-lg"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">
+                                    <i class="footer-item__icon fa-brands fa-linkedin fa-lg"></i>
+                                    LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">TẢI ỨNG DỤNG TẠI</h3>
+                        <div class="footer__download">
+                            <img src="./assets/img/qr_code.png" alt="QR CODE" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <img src="./assets/img/google_play.png" alt="GOOGLE PLAY" class="footer__download-app-img">
+                                <img src="./assets/img/app_store.png" alt="APP STORE" class="footer__download-app-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">© 2022 Bản quyền thuộc về Lâm Lý Lê</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Modal layout -->
+    <div class="modal form--closed">
+        <div class="modal__overlay">
+
+        </div>
+        <div class="modal__body">
+            <!-- Register form -->
+            <form action="" method="post" class="form" id="form-1">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng ký</h3>
+                            <button class="auth-form__close-button">X</button>
+                        </div>
+    
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input id="fullname" name="fullname" type="text" class="auth-form__input" placeholder="Họ tên">
+                                <span class="auth-form__msg"></span>
+                            </div>
+                            <div class="auth-form__group">
+                                <input id="email" name="email" type="text" class="auth-form__input" placeholder="Email">
+                                <span class="auth-form__msg"></span>
+                            </div>
+                            <div class="auth-form__group">
+                                <input id="password" name="password" type="password" class="auth-form__input" placeholder="Mật khẩu">
+                                <span class="auth-form__msg"></span>
+                            </div>
+                        </div>
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">Bằng việc đăng ký, bạn đồng ý với chúng tôi về
+                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+                        <div class="auth-form__controls">
+                            <button class="btn btn--primary auth-form__controls-btn">ĐĂNG KÝ</button>
+                        </div>
+                        <span class="auth-form__option">
+                            <p class="auth-form__option-line">_______________________</p>
+                            <p class="auth-form__option-text">HOẶC</p>
+                            <p class="auth-form__option-line">_______________________</p>
+                        </span>
+                        <div class="auth-form__socials">
+                            <a href="" class="btn btn--with-icon auth-form__socials-text">
+                                <i class="fa-brands fa-facebook fa-xl auth-form__socials-icon-fb"></i>
+                                Facebook
+                            </a>
+                            <a href="" class="btn btn--with-icon auth-form__socials-text">
+                                <i class="fa-brands fa-google fa-xl"></i>
+                                Google
+                            </a>
+                        </div>
+                        <div class="auth-form__login-text">Bạn đã có tài khoản?
+                            <a href="" class="auth-form__login-text-btn" id="login-link">Đăng nhập</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+
+            <!-- login form -->
+            <form action="" method="post" class="form" id="form-2">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng nhập</h3>
+                            <button class="auth-form__close-button">X</button>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input id="email" name="email" type="text" class="auth-form__input" placeholder="Email">
+                                <span class="auth-form__msg"></span>
+                            </div>
+                            <div class="auth-form__group">
+                                <input id="password" name="password" type="password" class="auth-form__input" placeholder="Mật khẩu">
+                                <span class="auth-form__msg"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="auth-form__controls">
+                            <button class="btn btn--primary auth-form__controls-btn auth-form__controls-btn-login">ĐĂNG NHẬP</button>
+                        </div>
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="" class="auth-form__help-link">Quên mật khẩu</a>
+                                <a href="" class="auth-form__help-link">Cần trợ giúp</a>
+                            </div>
+                        </div>
+                        <span class="auth-form__option">
+                            <p class="auth-form__option-line">_______________________</p>
+                            <p class="auth-form__option-text">HOẶC</p>
+                            <p class="auth-form__option-line">_______________________</p>
+                        </span>
+                        <div class="auth-form__socials">
+                            <a href="" class="btn btn--with-icon auth-form__socials-text">
+                                <i class="fa-brands fa-facebook fa-xl auth-form__socials-icon-fb"></i>
+                                Facebook
+                            </a>
+                            <a href="" class="btn btn--with-icon auth-form__socials-text">
+                                <i class="fa-brands fa-google fa-xl"></i>
+                                Google
+                            </a>
+                        </div>
+                        <div class="auth-form__login-text">Bạn chưa có tài khoản?
+                            <a href="" class="auth-form__login-text-btn" id="register-link">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <!-- <script src="./js/script.js"></script> -->
+    <script>
+        Validator ({
+            form: "#form-1",
+            formGroupSelector: '.auth-form__group',
+            errSelector: '.auth-form__msg',
+            rules: [
+                Validator.isRequired("#fullname", "Vui lòng nhập tên đầy đủ của bạn"),
+                Validator.isRequired("#email", "Vui lòng nhập đầy đủ email của bạn"),
+                Validator.isEmail("#email"),
+                Validator.minLength("#password", 6),
+            ],
+            onSubmit: function (data) {
+                // call api
+                console.log(data);
+            }
+
+        });
+
+        Validator ({
+            form: "#form-2",
+            formGroupSelector: '.auth-form__group',
+            errSelector: '.auth-form__msg',
+            rules: [
+                Validator.isRequired("#email", "Vui lòng nhập đầy đủ email của bạn"),
+                Validator.isEmail("#email"),
+                Validator.minLength("#password", 6),
+            ],
+            onSubmit: function (data) {
+                // call api
+                console.log(data);
+            }
+
+        });
+    </script>
+</body>
+</html>

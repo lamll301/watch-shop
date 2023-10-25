@@ -1,0 +1,44 @@
+<div class="mt-4">
+    <h3>Thêm đồng hồ</h3>
+    <form class="mt-4" method="POST" action="/admin/prod-store">
+        <div class="form-group">
+            <label for="name">Tên đồng hồ</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="description">Mô tả đồng hồ</label>
+            <input type="text" class="form-control" id="description" name="description">
+        </div>
+        <div class="form-group">
+            <label for="image">Ảnh đồng hồ</label>
+            <input type="text" class="form-control" id="image" name="image">
+        </div>
+        <div class="form-group">
+            <label for="price">Giá đồng hồ</label>
+            <input type="text" class="form-control" id="price" name="price">
+        </div>
+        <div class="form-group">
+            <label for="discount">Phần trăm giảm</label>
+            <input type="text" class="form-control" id="discount" name="discount" placeholder="Nhập phần trăm giảm (0-100)" pattern="^(100|[1-9]?[0-9])$">
+        </div>
+        <div class="form-group">
+            <label for="stock_quantity">Số lượng trong kho</label>
+            <input type="number" class="form-control" id="stock_quantity" name="stock_quantity">
+        </div>
+        <div class="form-group">
+            <label for="manufacturer">Nhà sản xuất</label>
+            <input type="text" class="form-control" id="manufacturer" name="manufacturer">
+        </div>
+        <div class="form-group">
+            <label for="categories_slug">Phân loại</label>
+            <select class="custom-select" id="categories_slug" name="categories_slug">
+                {{#each categories}}
+                <option value="{{this.slug}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <input type="hidden" name="price_discount" id="price_discount">
+        
+        <button type="submit" class="btn btn-primary" onclick="calculatePriceDiscount(this.form.price.value, this.form.discount.value)">Thêm đồng hồ</button>
+    </form>
+</div>

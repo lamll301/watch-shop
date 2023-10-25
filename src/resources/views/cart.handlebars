@@ -1,0 +1,70 @@
+
+<div class="tab-pane grid order ">
+    <div class="order-upper-part">
+        <div class="order-customer">
+            <h1 class="order-customer-heading">Shopping cart</h1>
+            <div class="order-lower-part">
+                <h3 class="order-customer-text">Chi tiết giỏ hàng</h3>
+                {{#each cart.products}}
+                <form method="POST" action="/cart/prod/{{this._id}}?_method=PUT">
+                <div class="order-prod">
+                    <img src="{{this.image}}" alt="" class="order-prod-img">
+                    <div class="order-prod-info">
+                        <a href="/product/{{this._id}}" class="order-prod-name">{{this.name}}</a>
+                        <br><br><a href="/product/{{this._id}}" class="order-prod-description">{{this.description}}</a>
+                        <br><br><span class="order-prod-stock-quantity">Còn lại {{this.stock_quantity}} cái.</span>
+                    </div>
+                    <div class="order-prod-price">
+                        <p class="order-prod-curr-price">
+                            {{addDotsToNumber (calculatePrice this.price this.discount)}} ₫
+                        </p>
+                        <p class="order-prod-old-price">{{addDotsToNumber this.price}} ₫</p>
+                        <p class="order-prod-discount">- {{this.discount}}%</p>
+                        <button class="order-prod-remove">
+                            <i class="fa-solid fa-trash fa-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="order-prod-quantity">Số lượng: 
+                        <input 
+                            type="number" class="order-prod-quantity-input" value="{{this.quantity}}" min="1" name="quantity"
+                        >
+                    </div>
+                    <input type="hidden" name="act" value="remove">
+                </div>
+                </form>
+                {{/each}}
+                
+            </div>
+        </div>
+        <div class="order-payment">
+            <h3 class="order-payment-heading order-customer-text">Thông tin đơn hàng</h3>
+            <div class="order-payment-row">Tạm tính ({{cart.products.length}} Sản phẩm)
+                <span class="order-payment-price">{{addDotsToNumber cart.products_price}} ₫</span>
+            </div>
+            <div class="order-payment-row">Phí vận chuyển
+                <span class="order-payment-price">{{addDotsToNumber (multiplication cart.products.length 50000)}} ₫</span>
+            </div>
+            <div class="order-payment-row order-payment-total">Tổng cộng:
+                <span class="order-payment-price order-payment-total-price">
+                    {{addDotsToNumber (sum cart.products_price (multiplication cart.products.length 50000))}} ₫
+                </span>
+            </div>
+            <button onclick="window.location.href='http://localhost:3000/order/products'" class="order-payment-btn header__search-btn">
+                <span class="header__search-btn-text">Xác nhận giỏ hàng</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const quantityInput = document.querySelectorAll('.order-prod-quantity-input');
+    
+    quantityInput.forEach(input => {
+        input.addEventListener('change', () => {
+            const form = input.closest('form');
+            form.querySelector('[name="act"]').value = 'update';
+            form.submit();
+        });
+    })
+</script>

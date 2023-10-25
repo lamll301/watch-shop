@@ -1,0 +1,245 @@
+<div class="tab-pane grid order">
+    <form method="POST" action="/order/store">
+    <div class="order-upper-part">
+        <div class="order-customer">
+            <h1 class="order-customer-heading">Your Order</h1>
+            <div class="order-customer-info">
+                <h3 class="order-customer-text">Thông tin khách hàng</h3>
+                <div class="order-customer-content">
+                    <div class="order-customer-row">
+                        <label for="" class="order-customer-row-label">Họ tên *</label>
+                        <input type="text" class="order-customer-row-input" id="customer_name" name="customer_name">
+                    </div>
+                    <div class="order-customer-row">
+                        <label for="" class="order-customer-row-label">Số điện thoại *</label>
+                        <input type="text" class="order-customer-row-input" id="customer_number" name="customer_number">
+                    </div>
+                    <div class="order-customer-row">
+                        <label for="" class="order-customer-row-label">Địa chỉ nhận hàng *</label>
+                        <input type="text" class="order-customer-row-input" id="customer_address" name="customer_address">
+                    </div>
+                    <div class="order-customer-row">
+                        <label for="province" class="order-customer-row-label">Tỉnh/Thành phố *</label>
+                        <select id="province" name="customer_city" class="order-customer-row-input" onchange="loadDistricts()">
+                            <option value="">Chọn tỉnh/thành phố</option>
+                        </select>
+                    </div>
+                    <div class="order-customer-row">
+                        <label for="district" class="order-customer-row-label">Quận/Huyện *</label>
+                        <select id="district" name="customer_district" class="order-customer-row-input" onchange="loadWards()">
+                            <option value="">Chọn quận/huyện</option>
+                        </select>
+                    </div>
+                    <div class="order-customer-row">
+                        <label for="ward" class="order-customer-row-label">Phường/Xã *</label>
+                        <select id="ward" name="customer_ward" class="order-customer-row-input">
+                            <option value="">Chọn phường/xã</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-payment">
+            <h3 class="order-payment-heading order-customer-text">Thông tin đơn hàng</h3>
+            <div class="order-payment-row">Tạm tính (1 Sản phẩm)
+                <span class="order-payment-price">
+                    {{addDotsToNumber (multiplication (calculatePrice watches.price watches.discount) (getQuantityValueFromURL urlCurrent))}} ₫
+                </span>
+            </div>
+            <div class="order-payment-row">Phí vận chuyển
+                {{!-- cố định 1 sản phẩm 50k --}}
+                <span class="order-payment-price">50.000 ₫</span>
+            </div>
+            <div class="order-payment-row order-payment-total">Tổng cộng:
+                <span class="order-payment-price order-payment-total-price">
+                    {{addDotsToNumber (sum (multiplication (calculatePrice watches.price watches.discount) (getQuantityValueFromURL urlCurrent)) 50000)}} ₫
+                    {{!-- (getQuantityValueFromURL urlCurrent): số lượng --}}
+                </span>
+            </div>
+            <button class="order-payment-btn header__search-btn">
+                <span class="header__search-btn-text">Đặt hàng</span>
+            </button>
+            <input type="hidden" name="delivery_price" value="50000">
+            <input type="hidden" name="total_price" value="{{sum (multiplication (calculatePrice watches.price watches.discount) (getQuantityValueFromURL urlCurrent)) 50000}}">
+            <input type="hidden" name="account_id" value="{{account._id}}">
+            <input type="hidden" name="status" value="not-approved">
+        </div>
+    </div>
+    
+
+    <div class="order-lower-part">
+        <h3 class="order-customer-text">Chi tiết đơn hàng</h3>
+
+        <div class="order-prod">
+            <img src="{{watches.image}}" alt="" class="order-prod-img">
+            <div class="order-prod-info">
+                <a href="/product/{{watches._id}}" class="order-prod-name">Đồng hồ {{watches.name}}</a>
+                <br><br><a href="/product/{{this._id}}" class="order-prod-description">{{watches.description}}</a>
+                <br><br><span class="order-prod-stock-quantity">Còn lại {{watches.stock_quantity}} cái.</span>
+            </div>
+            <div class="order-prod-price">
+                <p class="order-prod-curr-price">{{addDotsToNumber (calculatePrice watches.price watches.discount)}} ₫</p>
+                <p class="order-prod-old-price">{{addDotsToNumber watches.price}} ₫</p>
+                <p class="order-prod-discount">- {{watches.discount}}%</p>
+                <a href="" class="order-prod-remove">
+                    <i class="fa-solid fa-trash fa-xl"></i>
+                </a>
+            </div>
+            <div class="order-prod-quantity" id="quantityDiv">Số lượng: 0</div>
+
+            <input type="hidden" name="products[0][_id]" value="{{watches._id}}">
+            <input type="hidden" name="products[0][name]" value="{{watches.name}}">
+            <input type="hidden" name="products[0][image]" value="{{watches.image}}">
+            <input type="hidden" name="products[0][description]" value="{{watches.description}}">
+            <input type="hidden" name="products[0][manufacturer]" value="{{watches.manufacturer}}">
+            <input type="hidden" name="products[0][old_price]" value="{{watches.price}}">
+            <input type="hidden" name="products[0][current_price]" value="{{calculatePrice watches.price watches.discount}}">
+            <input type="hidden" name="products[0][quantity]" value="" id="quantityInput">
+            <input type="hidden" name="products[0][pay_price]" value="{{multiplication (calculatePrice watches.price watches.discount) (getQuantityValueFromURL urlCurrent)}}">
+            <input type="hidden" name="products[0][stock_quantity]" value="{{watches.stock_quantity}}">
+        </div>
+
+    </div>
+    </form>
+</div>
+
+
+
+<script>
+    const dataMap = {
+        provinces: {},
+        districts: {},
+        wards: {}
+    };
+
+    function fetchProvinces() {
+        fetch('https://vapi.vnappmob.com/api/province')
+            .then(response => response.json())
+            .then(data => {
+                const provinceSelect = document.getElementById("province");
+
+                // Điền danh sách các tỉnh thành phố vào list box
+                data.results.forEach(function (province) {
+                    const option = document.createElement("option");
+                    option.value = province.province_name;
+                    option.textContent = province.province_name;
+                    provinceSelect.appendChild(option);
+
+                    // Lưu thông tin vào dataMap để sử dụng sau này
+                    dataMap.provinces[province.province_name] = province.province_id;
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching provinces:', error);
+            });
+    }
+
+    function loadDistricts() {
+        const provinceSelect = document.getElementById("province");
+        const districtSelect = document.getElementById("district");
+        const wardSelect = document.getElementById("ward");
+
+        // Xóa tất cả các tùy chọn cũ trong danh sách quận/huyện và phường/xã
+        districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
+        wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+
+        const selectedProvinceName = provinceSelect.value;
+
+        // Nếu đã chọn một tỉnh/thành phố, điền danh sách quận/huyện tương ứng
+        if (selectedProvinceName) {
+            // Lấy id của tỉnh/thành phố được chọn từ dataMap
+            const selectedProvinceId = dataMap.provinces[selectedProvinceName];
+
+            // Gửi yêu cầu API để lấy dữ liệu quận huyện cho tỉnh/thành phố được chọn
+            fetch(`https://vapi.vnappmob.com/api/province/district/${selectedProvinceId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Điền danh sách các quận/huyện vào list box
+                    data.results.forEach(function (district) {
+                        const option = document.createElement("option");
+                        option.value = district.district_name;
+                        option.textContent = district.district_name;
+                        districtSelect.appendChild(option);
+
+                        // Lưu thông tin vào dataMap để sử dụng sau này
+                        dataMap.districts[district.district_name] = district.district_id;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching districts:', error);
+                });
+        }
+    }
+
+    function loadWards() {
+        const districtSelect = document.getElementById("district");
+        const wardSelect = document.getElementById("ward");
+
+        // Xóa tất cả các tùy chọn cũ trong danh sách phường/xã
+        wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+
+        const selectedDistrictName = districtSelect.value;
+
+        // Nếu đã chọn một quận/huyện, điền danh sách phường/xã tương ứng
+        if (selectedDistrictName) {
+            // Lấy id của quận/huyện được chọn từ dataMap
+            const selectedDistrictId = dataMap.districts[selectedDistrictName];
+
+            // Gửi yêu cầu API để lấy dữ liệu phường xã cho quận/huyện được chọn
+            fetch(`https://vapi.vnappmob.com/api/province/ward/${selectedDistrictId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Điền danh sách các phường/xã vào list box
+                    data.results.forEach(function (ward) {
+                        const option = document.createElement("option");
+                        option.value = ward.ward_name;
+                        option.textContent = ward.ward_name;
+                        wardSelect.appendChild(option);
+
+                        // Lưu thông tin vào dataMap để sử dụng sau này
+                        dataMap.wards[ward.ward_name] = ward.ward_id;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching wards:', error);
+                });
+        }
+    }
+
+    // Hàm đổi id thành tên
+    function getNameById(id, dataType) {
+        switch (dataType) {
+            case "province":
+                return id; // Vì id đã là tên tỉnh/thành phố
+            case "district":
+                return dataMap.districts[id] || "Không xác định";
+            case "ward":
+                return dataMap.wards[id] || "Không xác định";
+            default:
+                return "Không xác định";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        fetchProvinces();
+    });
+    
+    // Lấy URL hiện tại
+    const currentURL = new URL(window.location.href);
+
+    // Trích xuất giá trị quantity từ URL
+    const urlParams = new URLSearchParams(currentURL.search);
+    const quantityValue = urlParams.get('quantity');
+
+    // Kiểm tra và đặt giá trị vào các thẻ HTML
+    if (quantityValue) {
+    // Đặt giá trị vào thẻ div
+    const quantityDiv = document.getElementById('quantityDiv');
+    quantityDiv.textContent = `Số lượng: ${quantityValue}`;
+
+    // Đặt giá trị vào thẻ input
+    const quantityInput = document.getElementById('quantityInput');
+    quantityInput.value = quantityValue;
+    }
+    
+</script>

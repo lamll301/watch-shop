@@ -1,0 +1,186 @@
+<div class="tab-pane grid account__settings">
+    <div class="order-upper-part">
+        <div class="order-customer account__settings-tabs">
+            <h1 class="order-customer-heading">Quản lý tài khoản</h1>
+            
+            <div class="account__settings-tabs-container">
+                <div class="account__settings-tab account__settings-tab-active">
+                    <a href="" class="account__settings-tab--links">Thông tin cá nhân</a>
+                </div>
+                <div class="account__settings-tab ">
+                    <a href="" class="account__settings-tab--links">Đổi mật khẩu</a>
+                </div>
+                <div class="account__settings-tab">
+                    <a href="" class="account__settings-tab--links">Đơn mua</a>
+                </div>
+            </div>
+            <!-- thông tin cá nhân -->
+            <form class="mt-4" method="POST" action="/settings/customer?_method=PUT">
+            <div class="account__settings-tab-pane order-lower-part">
+                <h3 class="order-customer-text account__settings-text">Thông tin cá nhân</h3>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Tên</span>
+                    <div class="account__settings-block-content">
+                        <input name="fullname" type="text" class="account__settings-block-content-input" value="{{account.fullname}}"></input>
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Giới tính</span>
+                    <div class="account__settings-block-content">
+                        <div class="account__settings-block-content-gender">
+                            <input type="radio" name="gender" class="account__settings-block-content-radio" value="Nam" 
+                                {{#if (areEqual customer.gender 'Nam')}}checked{{/if}}></input>
+                            Nam
+                        </div>
+                        <div class="account__settings-block-content-gender">
+                            <input type="radio" name="gender" class="account__settings-block-content-radio" value="Nữ"
+                                {{#if (areEqual customer.gender 'Nữ')}}checked{{/if}}></input>
+                            Nữ
+                        </div>
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Email</span>
+                    <div class="account__settings-block-content">
+                        <input name="email" type="text" class="account__settings-block-content-input" value="{{account.email}}" readonly></input>
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Số điện thoại</span>
+                    <div class="account__settings-block-content">
+                        <input name="phone" type="text" class="account__settings-block-content-input" value="{{customer.phone}}"></input>
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Ngày sinh</span>
+                    <div class="account__settings-block-content">
+                        <input name="date_of_birth" type="date" class="account__settings-block-content-input" value="{{customer.date_of_birth}}">
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Địa chỉ</span>
+                    <div class="account__settings-block-content">
+                        <textarea name="address" class="account__settings-block-content-input account__settings-block-content-textarea">{{customer.address}}</textarea>
+                    </div>
+                </div>
+                <button class="account__settings-btn">Lưu</button>
+            </div>
+            </form>
+            <!-- đổi mk -->
+            <form class="mt-4" method="POST" action="/settings/{{account._id}}?_method=PUT">
+            <div class="account__settings-tab-pane order-lower-part form--closed">
+                <h3 class="order-customer-text account__settings-text">Đổi mật khẩu</h3>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Email</span>
+                    <div class="account__settings-block-content">
+                        <input name="email" type="text" class="account__settings-block-content-input" value="{{account.email}}" readonly></input>
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Mật khẩu cũ</span>
+                    <div class="account__settings-block-content">
+                        <input name="old_password" type="password" class="account__settings-block-content-input"></input>
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Mật khẩu mới</span>
+                    <div class="account__settings-block-content">
+                        <input name="new_password" type="password" class="account__settings-block-content-input"></input>
+                    </div>
+                </div>
+                <div class="account__settings-block">
+                    <span class="account__settings-block-text">Xác nhận mật khẩu</span>
+                    <div class="account__settings-block-content">
+                        <input name="confirm_password" type="password" class="account__settings-block-content-input"></input>
+                    </div>
+                </div>
+                <button class="account__settings-btn">Lưu</button>
+            </div>
+            </form>
+            <!-- đơn mua -->
+            <div class="account__settings-tab-pane form--closed">
+                <h3 class="order-customer-text account__settings-text">Đơn mua</h3>
+                {{#each orders}}
+                    {{#each products}}
+                    <div class="account__settings-purchase-order">
+                        <div class="account__settings-purchase-order-header">
+                            <div>
+                                <span class="account__settings-purchase-order-favourite">Yêu thích</span>
+                                <span class="account__settings-purchase-order-manufacturer">{{this.manufacturer}}</span>
+                            </div>
+                            <div class="account__settings-purchase-order-header-right">
+                                <span class="account__settings-purchase-order-status black-color">Mã đơn hàng: {{../_id}}</span>
+                                {{#if (areEqual ../status 'approved')}}
+                                <i class="fa-solid fa-truck-fast blue-color"></i>
+                                <span class="account__settings-purchase-order-status blue-color">Đơn hàng đang trong quá trình vận chuyển</span>
+                                {{else}}
+                                    {{#if (areEqual ../status 'done')}}
+                                    <i class="fa-solid fa-truck account__settings-purchase-order-icon"></i>
+                                    <span class="account__settings-purchase-order-status">Đơn hàng đã được giao thành công</span>
+                                    {{else}}
+                                        {{#if (areEqual ../status 'canceled')}}
+                                        <i class="fa-solid fa-circle-xmark red-color"></i>
+                                        <span class="account__settings-purchase-order-status red-color">Đơn hàng đã bị hủy bỏ</span>
+                                        {{else}}
+                                        <i class="fa-solid fa-tablet-button yellow-color account__settings-purchase-order-evaluate-container"></i>
+                                        <span class="account__settings-purchase-order-status yellow-color">Đơn hàng đang chờ được xét duyệt</span>
+                                        {{/if}}
+                                    {{/if}}
+                                {{/if}}
+                                <div class="account__settings-latest-updates-icon">
+                                    <i class="fa-regular fa-circle-question"></i>
+                                    <div class="account__settings-purchase-order-evaluate-popup">
+                                        Cập nhật mới nhất
+                                        <br>
+                                        <span>{{../updatedAt}}</span>
+                                    </div>
+                                </div>
+                                <span class="account__settings-purchase-order-evaluate">ĐÁNH GIÁ</span>
+                            </div>
+                        </div>
+                        <div class="account__settings-purchase-order-content">
+                            <img src="{{this.image}}" alt="" class="account__settings-purchase-order-img">
+                            <div class="account__settings-purchase-order-prod">
+                                <div class="account__settings-purchase-order-about-prod">
+                                    <span class="account__settings-purchase-order-name">{{this.name}}</span>
+                                    <div class="account__settings-purchase-order-describe">{{this.description}}</div>
+                                    <div class="account__settings-purchase-order-quantity">x{{this.quantity}}</div>
+                                </div>
+                                <div class="account__settings-purchase-order-price">
+                                    <span class="account__settings-purchase-order-old-price">đ{{addDotsToNumber this.old_price}}</span>
+                                    <span class="account__settings-purchase-order-current-price">đ{{addDotsToNumber this.current_price}}</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="account__settings-purchase-block-pay-price">
+                            <span class="account__settings-purchase-pay-price-text">Thành tiền:</span>
+                            <span class="account__settings-purchase-pay-price">đ{{addDotsToNumber (sum this.pay_price 50000)}}</span>
+                        </div>
+                        <div class="account__settings-purchase-btns">
+                            <a href="/product/{{this._id}}" class="account__settings-purchase-btn account__settings-purchase-acquisition">Mua Lại</a>
+                            <a href="" class="account__settings-purchase-btn account__settings-purchase-contact">Liên Hệ Người Bán</a>
+                        </div>
+                    </div>
+                    {{/each}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // tab ui
+    const settings_tabs = document.querySelectorAll('.account__settings-tab');
+    const settings_panes = document.querySelectorAll('.account__settings-tab-pane');
+    settings_tabs.forEach((tab, index) => {
+        const pane = settings_panes[index];
+        tab.onclick = function (event) {
+            event.preventDefault();
+            document.querySelector('.account__settings-tab-pane:not(.form--closed)').classList.add('form--closed');
+            pane.classList.remove('form--closed');
+            document.querySelector('.account__settings-tab.account__settings-tab-active').classList.remove('account__settings-tab-active');
+            this.classList.add('account__settings-tab-active')
+        }
+    })
+</script>
