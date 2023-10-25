@@ -21,12 +21,13 @@
     "express-handlebars": "^7.1.0",
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
-    "mongoose": "^6.10.1", 
+    "mongoose": "^7.4.1",
     "mongoose-slug-generator": "^1.0.4",
     "mongoose-slug-updater": "^3.3.0"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1"
-  }
+  },
+  "engines": {"node": ">=18.16.0"}
 }
