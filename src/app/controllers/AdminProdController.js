@@ -1,5 +1,5 @@
 
-const Watch = require('../models/watch');
+const Watch = require('../models/Watch');
 const Category = require('../models/Category');
 const { multipleMongooseToObj } = require('../../util/mongoose');
 const { mongooseToObj } = require('../../util/mongoose');

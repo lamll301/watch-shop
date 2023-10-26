@@ -1,5 +1,5 @@
 
-const Watch = require('../models/watch');
+const Watch = require('../models/Watch');
 const Account = require('../models/Account');
 const Order = require('../models/Order');
 const Category = require('../models/Category');

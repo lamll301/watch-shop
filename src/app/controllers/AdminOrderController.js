@@ -1,6 +1,6 @@
 
 const Order = require('../models/Order');
-const Watch = require('../models/watch');
+const Watch = require('../models/Watch');
 
 const { multipleMongooseToObj } = require('../../util/mongoose');
 const { mongooseToObj } = require('../../util/mongoose');
