@@ -87,7 +87,8 @@ app.engine(
   }),
 );
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'resources\\views'));
+app.set('views', path.join(__dirname, 'resources/views'));
+// app.set('views', path.join(__dirname, 'resources\\views'));
 
 // custom Middleware
 app.use(SortMiddleware);
